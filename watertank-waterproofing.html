@@ -16,8 +16,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Water Tank Waterproofing Services in Surat | Mili Waterproofing™</title>
-    <meta name="description" content="Certified food-grade water tank waterproofing in Surat. Permanent repair for underground & overhead water tanks with non-toxic coatings with warranty.">
-        <!-- Standard Favicon Icons -->
+    <meta name="description" content="Professional water tank waterproofing in Surat. Permanent repair for underground & overhead RCC and brick masonry water tanks with warranty.">
+    <!-- Standard Favicon Icons -->
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
@@ -267,6 +267,94 @@
             font-size: 0.9rem;
         }
 
+        /* Tank Calculator Section Styles */
+        .calc-container {
+            background: var(--white);
+            border-radius: 12px;
+            border: 1px solid var(--card-border);
+            padding: 35px;
+            box-shadow: var(--shadow);
+            max-width: 850px;
+            margin: 0 auto;
+        }
+        .calc-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+        .calc-tab {
+            flex: 1;
+            padding: 12px;
+            background: #f1f5f9;
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            text-align: center;
+            color: var(--text-muted);
+            transition: all 0.2s;
+        }
+        .calc-tab.active {
+            background: var(--accent);
+            color: var(--white);
+            border-color: var(--accent);
+        }
+        .calc-form-group {
+            margin-bottom: 16px;
+        }
+        .calc-form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--primary);
+        }
+        .calc-input {
+            width: 100%;
+            padding: 11px 14px;
+            border: 1px solid var(--card-border);
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+        .calc-input:focus {
+            outline: 2px solid var(--accent);
+            border-color: transparent;
+        }
+        .calc-result-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 24px;
+            margin-bottom: 20px;
+        }
+        .calc-result-box {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 8px;
+            padding: 18px;
+            text-align: center;
+        }
+        .calc-result-box.sqft-box {
+            background: #eff6ff;
+            border-color: #bfdbfe;
+        }
+        .calc-result-box h4 {
+            color: #166534;
+            font-size: 0.95rem;
+            margin-bottom: 6px;
+        }
+        .calc-result-box.sqft-box h4 {
+            color: #1e40af;
+        }
+        .calc-result-value {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #15803d;
+        }
+        .calc-result-box.sqft-box .calc-result-value {
+            color: #1d4ed8;
+        }
+
         /* SEO Editorial Content Box */
         .seo-content-box {
             background: var(--white);
@@ -303,55 +391,6 @@
         .seo-content-box li {
             margin-bottom: 10px;
             line-height: 1.6;
-        }
-
-        /* Lead Form Layout */
-        .contact-box {
-            background: var(--white);
-            border-radius: 12px;
-            border: 1px solid var(--card-border);
-            box-shadow: var(--shadow);
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            overflow: hidden;
-        }
-        .contact-info {
-            background: var(--primary);
-            color: var(--white);
-            padding: 45px 35px;
-        }
-        .contact-info h3 {
-            font-size: 1.8rem;
-            margin-bottom: 14px;
-        }
-        .info-row {
-            margin-top: 20px;
-            display: flex;
-            gap: 12px;
-            align-items: flex-start;
-        }
-        .contact-form {
-            padding: 45px 35px;
-        }
-        .form-group {
-            margin-bottom: 16px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-        .form-control {
-            width: 100%;
-            padding: 10px 12px;
-            border: 1px solid var(--card-border);
-            border-radius: 6px;
-            font-size: 0.95rem;
-        }
-        .form-control:focus {
-            outline: 2px solid var(--accent);
-            border-color: transparent;
         }
 
         /* FAQ */
@@ -403,7 +442,7 @@
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.1rem; }
             .nav-links { display: none; }
-            .contact-box { grid-template-columns: 1fr; }
+            .calc-result-grid { grid-template-columns: 1fr; }
             .top-bar { flex-direction: column; gap: 4px; text-align: center; }
             .seo-content-box { padding: 22px; }
         }
@@ -429,8 +468,8 @@
             <ul class="nav-links">
                 <li><a href="/">Home</a></li>
                 <li><a href="/#services">Services</a></li>
-                <li><a href="terrace-waterproofing"">Terrace</a></li>
-                <li><a href="basement-waterproofing"">Basement</a></li>
+                <li><a href="terrace-waterproofing">Terrace</a></li>
+                <li><a href="basement-waterproofing">Basement</a></li>
                 <li><a href="tel:9714343034" class="btn-call">Call 9714343034</a></li>
             </ul>
         </div>
@@ -439,43 +478,103 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-wrap">
-            <span class="badge">💧 100% Food-Grade Certified & Non-Toxic</span>
-            <h1>Certified Water Tank Waterproofing Services in Surat</h1>
-            <p>End water loss, concrete honeycombing, and pipe junction seepage permanently. High-performance non-toxic polymer and crystalline coatings for underground and overhead RCC tanks.</p>
+            <span class="badge">💧 RCC & Brick Masonry Water Tank Waterproofing</span>
+            <h1>Water Tank Waterproofing Services in Surat</h1>
+            <p>Professional waterproofing for underground and overhead RCC & brick masonry water tanks.</p>
             <div class="hero-actions">
-                <a href="#book-inspection" class="btn btn-primary">Book Site Inspection</a>
+                <a href="#calculator-section" class="btn btn-primary">Calculate Tank Size</a>
                 <a href="https://wa.me/919714343034?text=Hello%20Mili%20Waterproofing,%20I%20need%20Water%20Tank%20Waterproofing%20Quote" class="btn btn-whatsapp" target="_blank">Chat on WhatsApp</a>
             </div>
         </div>
     </section>
 
+    <!-- Tank Size Calculator & WhatsApp Quotation Section (Placed Right After Hero) -->
+    <div class="section" id="calculator-section">
+        <div class="section-header">
+            <h2>Smart Tank Size, Capacity & Sq. Ft. Calculator</h2>
+            <p>Calculate your tank capacity (Liters) and total waterproofing surface area (Sq. Ft.) instantly, and send quotation request directly on WhatsApp.</p>
+        </div>
+        <div class="calc-container">
+            <div class="calc-tabs">
+                <div class="calc-tab active" onclick="switchTankShape('square', this)">Square / Rectangular Tank</div>
+                <div class="calc-tab" onclick="switchTankShape('round', this)">Round Tank</div>
+            </div>
+
+            <!-- Square / Rectangular Inputs -->
+            <div id="squareInputs">
+                <div class="calc-form-group">
+                    <label>Length (in feet)</label>
+                    <input type="number" id="sqLength" class="calc-input" placeholder="e.g. 10" oninput="calculateTank()">
+                </div>
+                <div class="calc-form-group">
+                    <label>Width (in feet)</label>
+                    <input type="number" id="sqWidth" class="calc-input" placeholder="e.g. 8" oninput="calculateTank()">
+                </div>
+                <div class="calc-form-group">
+                    <label>Depth / Height (in feet)</label>
+                    <input type="number" id="sqDepth" class="calc-input" placeholder="e.g. 6" oninput="calculateTank()">
+                </div>
+            </div>
+
+            <!-- Round Inputs (Hidden by default) -->
+            <div id="roundInputs" style="display: none;">
+                <div class="calc-form-group">
+                    <label>Diameter (in feet)</label>
+                    <input type="number" id="rdDiameter" class="calc-input" placeholder="e.g. 8" oninput="calculateTank()">
+                </div>
+                <div class="calc-form-group">
+                    <label>Depth / Height (in feet)</label>
+                    <input type="number" id="rdDepth" class="calc-input" placeholder="e.g. 6" oninput="calculateTank()">
+                </div>
+            </div>
+
+            <!-- Results Grid (Liters + Sq. Ft.) -->
+            <div class="calc-result-grid">
+                <div class="calc-result-box">
+                    <h4>Tank Capacity (Volume):</h4>
+                    <div class="calc-result-value" id="capacityResult">0 Liters</div>
+                </div>
+                <div class="calc-result-box sqft-box">
+                    <h4>Waterproofing Area (Sq. Ft.):</h4>
+                    <div class="calc-result-value" id="sqftResult">0 Sq. Ft.</div>
+                </div>
+            </div>
+
+            <!-- WhatsApp Quote Button -->
+            <button onclick="sendWhatsAppQuote()" class="btn btn-whatsapp" style="width: 100%; justify-content: center; padding: 14px; font-size: 1.05rem;">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                Send Tank Size, Capacity & Sq. Ft. on WhatsApp
+            </button>
+        </div>
+    </div>
+
     <!-- Key Advantages -->
-    <div class="section">
+    <div class="section" style="padding-top: 0;">
         <div class="section-header">
             <h2>Why Mili Waterproofing™ for Water Tanks?</h2>
-            <p>Potable drinking water requires safe, non-toxic, and long-lasting coatings that withstand constant hydrostatic pressure.</p>
+            <p>Specialized permanent repair solutions for RCC and brick masonry water storage structures.</p>
         </div>
         <div class="grid-3">
             <div class="card">
                 <div class="card-icon">
                     <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
                 </div>
-                <h3>Food-Grade & Non-Toxic</h3>
-                <p>Completely safe for drinking water storage. Formulations with zero volatile organic compounds (VOC) preventing water contamination.</p>
+                <h3>RCC & Brick Masonry Tanks</h3>
+                <p>Complete waterproofing for underground sumps and overhead roof tanks.</p>
             </div>
             <div class="card">
                 <div class="card-icon">
                     <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
                 </div>
-                <h3>Crystalline Deep Penetration</h3>
-                <p>Penetrates up to 100mm inside RCC pores, growing non-soluble crystals that seal micro-cracks even under continuous water immersion.</p>
+                <h3>Deep Penetration Sealing</h3>
+                <p>Advanced polymer and crystalline treatments that seal micro-cracks and joint gaps permanently.</p>
             </div>
             <div class="card">
                 <div class="card-icon">
                     <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
                 </div>
-                <h3>Anti-Fungal & Anti-Algae</h3>
-                <p>Creates an ultra-smooth seamless finish that stops algae buildup, bacterial adhesion, and chemical salt degradation.</p>
+                <h3>Anti-Algae & Durable</h3>
+                <p>Prevents algal buildup and seepage issues backed by professional execution and reliable service.</p>
             </div>
         </div>
     </div>
@@ -484,121 +583,47 @@
     <div class="section" style="padding-top: 0;">
         <div class="section-header">
             <h2>Our 4-Step Tank Waterproofing Process</h2>
-            <p>Engineered systematically for both Underground (UG) Sumps and Overhead (OH) RCC Tanks.</p>
+            <p>Systematic execution methodology for underground sumps and overhead tanks.</p>
         </div>
         <div class="step-grid">
             <div class="step-card">
                 <div class="step-tag">01</div>
-                <h4>Pressure Dewatering & Cleaning</h4>
-                <p>Draining the tank, high-pressure jet washing walls, and wire-brushing to remove residual slime, dirt, and loose plaster.</p>
+                <h4>Pressure Washing & Cleaning</h4>
+                <p>Complete draining and high-pressure jet washing to clear all dirt, slime, and loose plaster surfaces.</p>
             </div>
             <div class="step-card">
                 <div class="step-tag">02</div>
                 <h4>Crack Routing & Grouting</h4>
-                <p>V-groove routing along construction joints and inlet/outlet pipe sleeves, filled with non-shrink polymer repair mortar.</p>
+                <p>V-groove routing along construction joints and pipe sleeves, filled with high-strength repair mortar.</p>
             </div>
             <div class="step-card">
                 <div class="step-tag">03</div>
-                <h4>Crystalline Slurry Base Coat</h4>
-                <p>Application of active crystalline waterproof slurry that chemically seals micro-capillaries inside the tank concrete.</p>
+                <h4>Slurry Base Coating</h4>
+                <p>Application of active waterproofing slurry that chemically seals micro-capillaries within the concrete.</p>
             </div>
             <div class="step-card">
                 <div class="step-tag">04</div>
-                <h4>Food-Grade Epoxy / Polymer Topcoat</h4>
-                <p>Dual-coat seamless food-grade protective membrane providing hygienic potable water protection and anti-algae durability.</p>
+                <h4>Protective Topcoat Membrane</h4>
+                <p>Dual-coat seamless membrane application providing long-lasting leakage protection.</p>
             </div>
         </div>
     </div>
 
-    <!-- In-Depth Technical & SEO Guide Section (750+ Words) -->
+    <!-- In-Depth Technical & SEO Guide Section -->
     <div class="section" style="padding-top: 0;">
         <div class="seo-content-box">
-            <h2>Hygienic & Durable Water Tank Waterproofing Solutions in Surat</h2>
-            <p>Reinforced concrete (RCC) water storage structures—including underground sumps and rooftop overhead tanks—are fundamental utilities for residential societies, individual bungalows, commercial complexes, and industrial plants across Surat. However, constant containment of thousands of liters of water generates substantial internal hydrostatic pressure against concrete walls and floor bases. Over time, poorly waterproofed tanks develop fine fractures, plaster spalling, and joint leakages. In Surat's environment, where coastal humidity and municipal treated water contain varying mineral and chlorine concentrations, unsealed concrete undergoes rapid degradation, resulting in costly water wastage, building dampness, and severe contamination risks.</p>
+            <h2>Water Tank Waterproofing Services in Surat</h2>
+            <p>Reinforced concrete (RCC) and brick masonry water storage structures—including underground sumps and rooftop overhead tanks—are essential utilities for residential societies and commercial properties across Surat. Over time, constant hydrostatic pressure and joint movements cause hairline fractures and joint leaks, resulting in water loss and dampness. At Mili Waterproofing™, we specialize in comprehensive waterproofing solutions exclusively for RCC and brick masonry water tanks.</p>
 
-            <h3>The Two-Way Threat in Underground Sump Tanks</h3>
-            <p>Underground water sumps face a dangerous dual-direction water threat known as positive and negative hydrostatic pressure:</p>
+            <h3>Common Leakage Zones in Water Tanks</h3>
             <ul>
-                <li><strong>Outward Water Loss (Positive Pressure):</strong> Water stored inside leaks through porous concrete floors and cold joints into the surrounding soil, leading to continuous drop in water levels and excessive pumping costs.</li>
-                <li><strong>Inward Groundwater Contamination (Negative Pressure):</strong> During Surat's monsoon season, saturated groundwater and nearby drainage soil moisture exert reverse pressure, forcing dirty water, bacteria, and sewage contaminants into the drinking water supply through hairline cracks.</li>
+                <li><strong>Pipe Junctions:</strong> Inlet, outlet, and overflow pipe sleeves that develop gaps due to constant vibration.</li>
+                <li><strong>Floor-to-Wall Corners:</strong> 90-degree right-angle junctions prone to shear stress and cracking.</li>
+                <li><strong>Construction Joints:</strong> Seams between floor slabs and vertical wall casting.</li>
             </ul>
 
-            <h3>Why Overhead Tanks Require Immediate Waterproofing</h3>
-            <p>Overhead RCC tanks built on terrace slabs represent a major cause of top-floor ceiling dampness across apartments in Adajan, Vesu, and Varachha. When an overhead tank leaks, water seeps directly through the tank floor into the structural roof slab below. The dampness travels through internal conduit pipes, causing paint peeling, electrical short circuits, and severe rusting of ceiling rebar rods. Treating the terrace alone does not resolve the issue if the tank itself is continuously leaking.</p>
-
-            <h3>Vulnerable Areas in Concrete Water Tanks</h3>
-            <p>Our comprehensive leak diagnostic surveys identify distinct structural zones where water tanks fail most frequently:</p>
-            <ul>
-                <li><strong>Pipe Inlets, Outlets & Overflow Collars:</strong> Metal or PVC plumbing pipes cast into concrete have differing thermal expansion rates. Mechanical vibration from motor pumps loosens the pipe collar, creating annular gaps where water channels through.</li>
-                <li><strong>90-Degree Floor-to-Wall Junctions:</strong> Right-angle corners endure maximum shear stress. Without curved polymer coving (angle filleting), corner joints easily crack under hydrostatic weight.</li>
-                <li><strong>Construction Cold Joints (Kicker Lines):</strong> The horizontal seam where the floor raft finishes and the vertical wall casting begins is inherently vulnerable to water bypass.</li>
-                <li><strong>Surface Honeycombing:</strong> Uncompacted gravel pockets during concreting that form direct pathways for water seepage.</li>
-            </ul>
-
-            <h3>Certified Food-Grade & Non-Toxic Chemical Systems</h3>
-            <p>At Mili Waterproofing™, potable water safety is our paramount priority. Many untrained contractors apply toxic bitumen, coal tar, or low-grade industrial epoxy inside drinking water tanks, which leach hazardous chemicals into domestic water supplies. We strictly deploy certified non-toxic, solvent-free 2-component polymer-modified cementitious coatings and food-grade epoxy barriers. These products:</p>
-            <ol>
-                <li>Comply with international drinking water safety standards (Zero VOC emissions).</li>
-                <li>Prevent microbial adhesion, fungal infestation, and green algae colonization.</li>
-                <li>Resist continuous immersion without blistering, chalking, or altering water taste and smell.</li>
-            </ol>
-
-            <h3>Scientific Step-by-Step Execution</h3>
-            <p>Our technicians dewater and thoroughly pressure-wash the tank interior to eliminate bio-films and loose plaster. All cracks and pipe penetrations are chisel-routed into V-grooves and packed tight with high-strength non-shrink polymer repair mortar. We then install 50mm x 50mm polymer covings across all perimeter junctions. Finally, two coats of crystalline penetrating slurry followed by two coats of flexible food-grade elastomeric membrane are applied, providing seamless monolithic protection backed by an official 3 to 10-year written warranty.</p>
-
-            <h3>Serving Residential Societies & Commercial Facilities in Surat</h3>
-            <p>We provide dedicated water tank rehabilitation and waterproofing services across all key neighborhoods in Surat, including Varachha, Katargam, Adajan, Pal, Vesu, Althan, Citylight, and industrial corridors. Protect your family's health and preserve your property's structural value by scheduling an expert on-site tank inspection today.</p>
-        </div>
-    </div>
-
-    <!-- Lead Form -->
-    <div class="section" id="book-inspection" style="padding-top: 0;">
-        <div class="contact-box">
-            <div class="contact-info">
-                <h3>Schedule a Tank Inspection in Surat</h3>
-                <p>Facing water loss or dampness behind tank walls? Contact our technical team for a non-destructive survey.</p>
-                <div class="info-row">
-                    <div>
-                        <strong>Call Directly:</strong><br>
-                        +91 9714343034
-                    </div>
-                </div>
-                <div class="info-row">
-                    <div>
-                        <strong>Coverage Areas:</strong><br>
-                        Varachha, Katargam, Adajan, Pal, Vesu, Mota Varachha, and all areas across Surat.
-                    </div>
-                </div>
-            </div>
-
-            <div class="contact-form">
-                <form name="watertank-enquiry" method="POST" data-netlify="true">
-                    <div class="form-group">
-                        <label>Full Name *</label>
-                        <input type="text" name="name" class="form-control" placeholder="e.g. Haresh Patel" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Phone Number *</label>
-                        <input type="tel" name="phone" class="form-control" placeholder="+91 98985 90909" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Area / Society in Surat *</label>
-                        <input type="text" name="location" class="form-control" placeholder="e.g. Mota Varachha / Adajan" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Tank Type & Capacity</label>
-                        <select name="tank_type" class="form-control">
-                            <option>Underground RCC Sump Tank</option>
-                            <option>Overhead RCC Roof Tank</option>
-                            <option>Commercial / Industrial Storage Tank</option>
-                            <option>Other / Not Sure</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 13px;">
-                        Request Tank Survey
-                    </button>
-                </form>
-            </div>
+            <h3>Serving Residential & Commercial Clients in Surat</h3>
+            <p>We provide professional water tank waterproofing across Varachha, Katargam, Adajan, Pal, Vesu, Althan, Citylight, and all major areas in Surat. Use our calculator above to check your tank capacity and area, and connect with us instantly via WhatsApp.</p>
         </div>
     </div>
 
@@ -609,22 +634,22 @@
         </div>
         <div style="max-width: 800px; margin: 0 auto;">
             <div class="faq-item">
-                <h4>Is the waterproofing chemical safe for drinking water?</h4>
-                <p>Yes, absolutely. We use certified food-grade, non-toxic epoxy and polymer coatings that comply with drinking water safety standards and do not alter the taste, color, or odor of water.</p>
+                <h4>Do you provide waterproofing for plastic tanks?</h4>
+                <p>No. We exclusively provide waterproofing services for RCC and brick masonry water tanks (underground sumps and overhead tanks).</p>
             </div>
             <div class="faq-item">
-                <h4>Why do water tanks develop leaks around pipe fittings?</h4>
-                <p>Pipe fittings expand and contract at different rates than concrete during water flow vibrations. We treat pipe collars with specialized polymer bonding agents and polyurethane flexible sealants to prevent this issue.</p>
+                <h4>How much curing time is required before filling water?</h4>
+                <p>Typically, 10 to 15 hours of complete curing is required after applying the final coat before refilling the tank.</p>
             </div>
             <div class="faq-item">
-                <h4>How much curing time is required before filling water again?</h4>
-                <p>Typically, 48 to 72 hours of complete curing is required after applying the final coat before the tank can be refilled and put back into active use.</p>
+                <h4>How can I get an accurate quotation for my tank?</h4>
+                <p>You can use our calculator on this page to enter your tank dimensions and instantly forward the size, capacity, and square footage to us on WhatsApp for a quick estimate.</p>
             </div>
         </div>
     </div>
 
     <!-- WhatsApp Quick Connect -->
-    <a href="https://wa.me/919714343034?text=Hi%20Mili%20Waterproofing,%20I%20need%20water%20tank%20inspection" class="float-cta" target="_blank">
+    <a href="https://wa.me/919714343034?text=Hi%20Mili%20Waterproofing,%20I%20need%20water%20tank%20waterproofing%20quote" class="float-cta" target="_blank">
         <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
         Quick Chat
     </a>
@@ -634,6 +659,94 @@
         <p>© 1995 Mili Waterproofing™ — Surat, Gujarat. All Rights Reserved.</p>
         <p style="margin-top: 6px;"><a href="/">Home</a> · <a href="tel:9714343034">+91 9714343034</a> · C-2058 Second Floor Central Bazar, Varachha Main Road, Surat, Gujarat 395008</p>
     </footer>
+
+    <!-- Calculator JavaScript -->
+    <script>
+        let currentShape = 'square';
+
+        function switchTankShape(shape, element) {
+            currentShape = shape;
+            document.querySelectorAll('.calc-tab').forEach(tab => tab.classList.remove('active'));
+            element.classList.add('active');
+
+            if (shape === 'square') {
+                document.getElementById('squareInputs').style.display = 'block';
+                document.getElementById('roundInputs').style.display = 'none';
+            } else {
+                document.getElementById('squareInputs').style.display = 'none';
+                document.getElementById('roundInputs').style.display = 'block';
+            }
+            calculateTank();
+        }
+
+        function calculateTank() {
+            let volumeCubicFeet = 0;
+            let totalSqFt = 0;
+
+            if (currentShape === 'square') {
+                let length = parseFloat(document.getElementById('sqLength').value) || 0;
+                let width = parseFloat(document.getElementById('sqWidth').value) || 0;
+                let depth = parseFloat(document.getElementById('sqDepth').value) || 0;
+                
+                volumeCubicFeet = length * width * depth;
+                
+                // Surface Area for Square/Rectangular Tank (Base + 4 Walls)
+                let baseArea = length * width;
+                let wallsArea = 2 * (length * depth) + 2 * (width * depth);
+                totalSqFt = baseArea + wallsArea;
+
+            } else {
+                let diameter = parseFloat(document.getElementById('rdDiameter').value) || 0;
+                let depth = parseFloat(document.getElementById('rdDepth').value) || 0;
+                let radius = diameter / 2;
+                
+                volumeCubicFeet = Math.PI * Math.pow(radius, 2) * depth;
+                
+                // Surface Area for Round Tank (Flat Base + Curved Wall)
+                let baseArea = Math.PI * Math.pow(radius, 2);
+                let wallArea = 2 * Math.PI * radius * depth;
+                totalSqFt = baseArea + wallArea;
+            }
+
+            // 1 Cubic Foot = 28.3168 Liters
+            let totalLiters = volumeCubicFeet * 28.3168;
+            
+            let formattedLiters = totalLiters > 0 ? Math.round(totalLiters).toLocaleString('en-IN') + " Liters" : "0 Liters";
+            let formattedSqFt = totalSqFt > 0 ? Math.round(totalSqFt).toLocaleString('en-IN') + " Sq. Ft." : "0 Sq. Ft.";
+
+            document.getElementById('capacityResult').innerText = formattedLiters;
+            document.getElementById('sqftResult').innerText = formattedSqFt;
+
+            return {
+                liters: Math.round(totalLiters),
+                sqft: Math.round(totalSqFt)
+            };
+        }
+
+        function sendWhatsAppQuote() {
+            let res = calculateTank();
+            let msg = "Hello Mili Waterproofing, I want a quotation for Water Tank Waterproofing.%0a";
+            msg += "Tank Type: RCC / Brick Masonry Tank%0a";
+            msg += "Shape: " + (currentShape === 'square' ? 'Square / Rectangular' : 'Round Tank') + "%0a";
+            
+            if (currentShape === 'square') {
+                let l = document.getElementById('sqLength').value || 0;
+                let w = document.getElementById('sqWidth').value || 0;
+                let d = document.getElementById('sqDepth').value || 0;
+                msg += "Size: " + l + "ft (L) x " + w + "ft (W) x " + d + "ft (Depth)%0a";
+            } else {
+                let dia = document.getElementById('rdDiameter').value || 0;
+                let d = document.getElementById('rdDepth').value || 0;
+                msg += "Size: Diameter " + dia + "ft x Depth " + d + "ft%0a";
+            }
+            
+            msg += "Capacity: " + res.liters.toLocaleString('en-IN') + " Liters%0a";
+            msg += "Waterproofing Area: " + res.sqft.toLocaleString('en-IN') + " Sq. Ft.";
+
+            let whatsappUrl = "https://wa.me/919714343034?text=" + msg;
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
 
 </body>
 </html>
