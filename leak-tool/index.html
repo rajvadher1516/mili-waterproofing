@@ -1,894 +1,452 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <link rel="canonical" href="https://miliwaterproofing.in/leak-tool/" />
-  
-  <title>Smart Leak Assessment & Diagnostic Tool | Mili Waterproofing Surat</title>
-  <meta name="description" content="Identify your building leakage source in 60 seconds. Instant diagnosis for terrace, concealed pipe, bathroom & water tank seepage in Surat by Mili Waterproofing." />
-  
-  <!-- Schema.org WebApplication Markup for Bing & Google -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "Smart Leak Assessment Tool",
-    "url": "https://miliwaterproofing.in/leak-tool/",
-    "applicationCategory": "UtilityApplication",
-    "operatingSystem": "All",
-    "browserRequirements": "Requires JavaScript. Requires HTML5.",
-    "creator": {
-      "@type": "HomeAndConstructionBusiness",
-      "name": "Mili Waterproofing",
-      "telephone": "+919714343034",
-      "url": "https://miliwaterproofing.in/"
-    },
-    "description": "Non-destructive preliminary assessment tool to diagnose structural leaks, terrace seepage, concealed plumbing issues, and bathroom dampness in Surat."
-  }
-  </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
-  <!-- Standard Favicon Icons -->
-  <link rel="icon" type="image/x-icon" href="../favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
-  <link rel="manifest" href="../site.webmanifest">
-
-  <style>
-    div[data-netlify-badge],
-    .netlify-badge,
-    iframe[title*="Netlify"],
-    #netlify-badge {
-      display: none !important;
-      visibility: hidden !important;
-      opacity: 0 !important;
-      pointer-events: none !important;
-    }
-
-    :root {
-      --bg: #F8FAFC; --fg: #0F172A; --muted: #475569; --faint: #94A3B8;
-      --card: #FFFFFF; --border: #E2E8F0;
-      --primary: #0284C7; --primary-strong: #0369A1;
-      --primary-soft: #F0F9FF; --primary-border: #BAE6FD;
-      --whatsapp: #25D366; --whatsapp-strong: #1EBE5D;
-      --danger: #DC2626; --danger-soft: #FEF2F2; --danger-border: #FECACA; --danger-text: #991B1B;
-      --amber-soft: #FEF3C7; --amber-text: #92400E; --amber-border: #FCD34D;
-      --sky-soft: #E0F2FE; --sky-text: #0369A1; --sky-border: #BAE6FD;
-      --teal-soft: #F0FDFA; --teal-text: #0F766E; --teal-border: #99F6E4;
-      --dark: #0F172A;
-      --radius: 14px;
-      --shadow: 0 1px 2px rgba(15, 23, 42, .05);
-      --shadow-lg: 0 8px 24px rgba(15, 23, 42, .08);
-      --font-body: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
-      --font-heading: "Outfit", var(--font-body);
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { width: 100%; overflow-x: hidden; }
-    body { min-height: 100vh; display: flex; flex-direction: column; font-family: var(--font-body); background: var(--bg); color: var(--fg); line-height: 1.6; font-size: 15px; }
-    main { flex: 1; width: 100%; overflow-x: hidden; }
-    h1, h2, h3, h4 { font-family: var(--font-heading); letter-spacing: -0.02em; line-height: 1.25; }
-    a { color: inherit; text-decoration: none; }
-    svg { display: block; }
-    .i { width: 18px; height: 18px; }
-    .container { width: 100%; max-width: 1152px; margin: 0 auto; padding: 0 16px; }
-    @media (min-width: 640px) { .container { padding: 0 28px; } }
-
-    /* Header & Navigation */
-    .site-header { position: sticky; top: 0; z-index: 50; background: rgba(255, 255, 255, .98); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); width: 100%; }
-    .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 8px; height: 64px; }
-    .brand { display: inline-flex; align-items: center; gap: 8px; font-weight: 800; font-size: 16px; font-family: var(--font-heading); }
-    .brand-mark { display: inline-flex; width: 34px; height: 34px; border-radius: 8px; background: var(--primary); color: #fff; align-items: center; justify-content: center; flex-shrink: 0; }
-    .brand-name em { font-style: normal; color: var(--primary); }
-    .brand-location { font-size: 11px; font-weight: 600; background: #E2E8F0; padding: 2px 7px; border-radius: 999px; color: var(--muted); }
-    .site-nav { display: flex; align-items: center; gap: 8px; }
-    .nav-link { padding: 6px 10px; border-radius: 8px; font-size: 13px; font-weight: 600; color: var(--muted); }
-    .nav-link:hover { color: var(--fg); background: #F1F5F9; }
-
-    @media (max-width: 768px) {
-      .nav-link, .nav-hide-mob { display: none !important; }
-      .header-call-btn { padding: 6px 12px; font-size: 13px; }
-    }
-
-    .site-footer { background: #fff; border-top: 1px solid var(--border); margin-top: 40px; }
-    .footer-inner { display: flex; flex-direction: column; gap: 16px; padding: 32px 0; }
-    @media (min-width: 640px) { .footer-inner { flex-direction: row; align-items: center; justify-content: space-between; } }
-    .footer-nav { display: flex; gap: 16px; font-size: 13px; color: var(--muted); flex-wrap: wrap; }
-    .footer-note { font-size: 13px; color: var(--muted); }
-
-    /* Buttons & Badges */
-    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid transparent; border-radius: 10px; font-weight: 600; font-size: 14px; padding: 10px 16px; cursor: pointer; transition: all .2s; }
-    .btn-block-mob { width: 100%; }
-    @media (min-width: 640px) { .btn-block-mob { width: auto; } }
-    .btn-sm { padding: 7px 14px; font-size: 13px; }
-    .btn-lg { padding: 12px 20px; font-size: 15px; }
-    .btn-primary { background: var(--primary); color: #fff; }
-    .btn-primary:hover { background: var(--primary-strong); }
-    .btn-whatsapp { background: var(--whatsapp); color: #fff; }
-    .btn-whatsapp:hover { background: var(--whatsapp-strong); }
-    .btn-danger { background: var(--danger); color: #fff; }
-    .btn-danger:hover { background: #B91C1C; }
-    .btn-outline { background: #fff; border-color: var(--border); color: var(--fg); }
-    .btn-outline:hover { background: #F8FAFC; border-color: #CBD5E1; }
-    .badge { display: inline-flex; align-items: center; border-radius: 999px; border: 1px solid; padding: 3px 10px; font-size: 11px; font-weight: 700; }
-    .badge-minor { background: var(--sky-soft); color: var(--sky-text); border-color: var(--sky-border); }
-    .badge-moderate { background: var(--amber-soft); color: var(--amber-text); border-color: var(--amber-border); }
-    .badge-emergency { background: #FEE2E2; color: var(--danger-text); border-color: #FCA5A5; }
-
-    /* Hero Section */
-    .hero { background: var(--dark); color: #F8FAFC; width: 100%; }
-    .hero-inner { padding: 42px 0 36px; }
-    @media (min-width: 640px) { .hero-inner { padding: 64px 0 54px; } }
-    .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: #0C4A6E; color: #BAE6FD; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; }
-    .hero h1 { font-size: clamp(26px, 6vw, 44px); font-weight: 800; margin-top: 14px; max-width: 760px; }
-    .hero p { margin-top: 12px; max-width: 640px; color: #CBD5E1; font-size: 15px; }
-    .hero-actions { margin-top: 22px; display: flex; flex-direction: column; gap: 10px; }
-    @media (min-width: 640px) { .hero-actions { flex-direction: row; flex-wrap: wrap; } }
-    .hero-meta { margin-top: 20px; font-size: 13px; color: #94A3B8; display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
-
-    /* Warning Strip */
-    .strip { background: var(--danger-soft); border-bottom: 1px solid var(--danger-border); width: 100%; }
-    .strip-inner { display: flex; flex-direction: column; gap: 10px; padding: 14px 0; align-items: flex-start; }
-    @media (min-width: 640px) { .strip-inner { flex-direction: row; align-items: center; justify-content: space-between; } }
-    .strip-msg { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: var(--danger-text); }
-    .strip-msg svg { width: 18px; height: 18px; color: var(--danger); flex-shrink: 0; }
-    .strip-actions { display: flex; gap: 8px; width: 100%; }
-    @media (min-width: 640px) { .strip-actions { width: auto; } }
-
-    /* Cards Grid */
-    .section { padding: 40px 0; width: 100%; }
-    .section-head h2 { font-size: clamp(22px, 4vw, 28px); font-weight: 800; }
-    .section-head p { margin-top: 6px; color: var(--muted); font-size: 14px; }
-    .cards-grid { margin-top: 24px; display: grid; grid-template-columns: 1fr; gap: 16px; }
-    @media (min-width: 640px) { .cards-grid { grid-template-columns: 1fr 1fr; } }
-    @media (min-width: 1024px) { .cards-grid { grid-template-columns: repeat(3, 1fr); } }
-    .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; display: flex; flex-direction: column; transition: transform .2s, border-color .2s, box-shadow .2s; }
-    .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--primary-border); }
-    .card-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
-    .icon-chip { display: inline-flex; width: 40px; height: 40px; border-radius: 10px; background: var(--primary-soft); color: var(--primary-strong); align-items: center; justify-content: center; }
-    .card h3 { font-size: 16px; margin-top: 12px; font-weight: 700; color: var(--dark); }
-    .card p { color: var(--muted); font-size: 13px; margin-top: 6px; flex: 1; line-height: 1.5; }
-    .card-cta { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; color: var(--primary); font-size: 13px; font-weight: 700; }
-
-    /* Detail View */
-    .detail { padding: 24px 0 44px; width: 100%; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); font-size: 13px; font-weight: 600; }
-    .detail-head { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }
-    @media (min-width: 640px) { .detail-head { flex-direction: row; justify-content: space-between; align-items: flex-start; } }
-    .detail-title { display: flex; gap: 14px; align-items: flex-start; }
-    .detail-summary { color: #334155; margin-top: 16px; font-size: 15px; }
-    .detail-grid { display: grid; gap: 24px; margin-top: 28px; grid-template-columns: 1fr; }
-    @media (min-width: 1024px) { .detail-grid { grid-template-columns: 2fr 1fr; } }
-    .detail-section h2 { font-size: 18px; margin-bottom: 12px; font-weight: 700; }
-    .detail-section + .detail-section { margin-top: 28px; }
-    .tick-list, .dot-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-    .tick-list li, .dot-list li { display: flex; gap: 8px; color: #334155; font-size: 14px; }
-    .tick-list svg { width: 16px; height: 16px; color: var(--primary); flex-shrink: 0; margin-top: 3px; }
-    .steps { list-style: none; }
-    .steps li { display: flex; gap: 12px; padding-bottom: 22px; position: relative; }
-    .steps li:last-child { padding-bottom: 0; }
-    .steps li:not(:last-child)::before { content: ""; position: absolute; left: 15px; top: 34px; bottom: 2px; width: 2px; background: var(--primary-border); }
-    .step-num { width: 32px; height: 32px; border-radius: 50%; background: var(--primary); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0; }
-    .steps h3 { font-size: 15px; }
-    .steps p { color: var(--muted); font-size: 13px; margin-top: 3px; }
-    .side { display: flex; flex-direction: column; gap: 16px; }
-    .panel { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
-    .panel h3 { font-size: 15px; display: flex; align-items: center; gap: 8px; font-weight: 700; }
-    .panel-danger { background: var(--danger-soft); border-color: var(--danger-border); }
-    .panel-danger h3, .panel-danger ul li { color: var(--danger-text); }
-    .panel-contact { background: var(--primary-soft); border-color: var(--primary-border); }
-    .check-row { display: flex; gap: 8px; align-items: flex-start; padding: 4px 0; }
-    .check-row input { width: 16px; height: 16px; margin-top: 3px; accent-color: var(--primary); flex-shrink: 0; }
-    .check-row label { font-size: 13px; color: #334155; }
-
-    /* Interactive Diagnostic Wizard */
-    .wizard-wrap { width: 100%; max-width: 660px; margin: 0 auto; padding: 32px 16px; }
-    .progress-dots { display: flex; gap: 8px; justify-content: center; margin-top: 18px; }
-    .progress-dots span { width: 48px; height: 6px; border-radius: 999px; background: var(--border); transition: background .3s; }
-    .progress-dots span.current { background: var(--primary); }
-    .progress-dots span.done { background: #0D9488; }
-    .step-card { margin-top: 22px; text-align: left; background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow); }
-    .options { display: flex; flex-direction: column; gap: 12px; margin-top: 18px; }
-    .option { display: flex; align-items: center; gap: 12px; min-height: 52px; background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 12px 16px; text-align: left; font-size: 14px; font-weight: 600; cursor: pointer; transition: all .2s; }
-    .option:hover { border-color: var(--primary); background: var(--primary-soft); color: var(--primary-strong); transform: translateX(3px); }
-    .option .arrow { margin-left: auto; color: var(--faint); }
-    .wizard-back { margin-top: 16px; display: inline-flex; align-items: center; gap: 6px; background: none; border: none; color: var(--muted); font-size: 13px; font-weight: 600; cursor: pointer; }
-    .result-card { margin-top: 22px; text-align: left; background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow-lg); }
-    .actions-box { margin-top: 18px; background: var(--primary-soft); border: 1px solid var(--primary-border); border-radius: 10px; padding: 16px; }
-    .actions-box h3 { font-size: 14px; color: var(--primary-strong); font-weight: 700; }
-    .actions-box ul { list-style: none; margin-top: 8px; display: flex; flex-direction: column; gap: 8px; }
-    .actions-box li { display: flex; gap: 8px; font-size: 13px; color: #1E293B; line-height: 1.5; }
-
-    /* Emergency View */
-    .em-hero { background: var(--danger-soft); border-bottom: 1px solid var(--danger-border); width: 100%; }
-    .em-hero-inner { padding: 32px 0; }
-    .em-hero h1 { color: var(--danger-text); font-size: clamp(22px, 5vw, 30px); margin-top: 10px; font-weight: 800; }
-    .em-grid { display: grid; gap: 24px; grid-template-columns: 1fr; padding: 28px 0 44px; }
-    @media (min-width: 1024px) { .em-grid { grid-template-columns: 7fr 5fr; } }
-    .progress-track { height: 6px; background: #FEE2E2; border-radius: 999px; overflow: hidden; margin-top: 10px; }
-    .progress-fill { height: 100%; width: 0; background: var(--danger); transition: width .3s; }
-    .em-list { list-style: none; margin-top: 16px; display: flex; flex-direction: column; gap: 10px; }
-    .em-item { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; display: flex; gap: 10px; }
-    .em-item.done { background: var(--teal-soft); border-color: var(--teal-border); }
-
-    /* Floating WhatsApp */
-    .float-wa { position: fixed; bottom: 20px; right: 16px; z-index: 100; display: inline-flex; align-items: center; gap: 6px; background: var(--whatsapp); color: #fff; padding: 10px 18px; border-radius: 50px; font-weight: 700; font-size: 13px; box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4); }
-    .toast { position: fixed; bottom: 74px; right: 16px; z-index: 100; background: var(--dark); color: #F8FAFC; padding: 10px 14px; border-radius: 10px; font-size: 13px; }
-  </style>
-<meta name="theme-color" content="#0a192f">
-<meta name="twitter:card" content="summary_large_image">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="canonical" href="https://miliwaterproofing.in/leak-tool/" />
+<title>Leak Assessment Tool for Surat Homes | Mili Waterproofing</title>
+<meta name="description" content="Answer three questions to find the likely source of a terrace, wall, bathroom, concealed pipe or water tank leak in Surat, with safe first steps. By Mili Waterproofing." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Leak Assessment Tool for Surat Homes | Mili Waterproofing" />
+<meta property="og:description" content="Find the likely source of your leak and the safe first steps. Preliminary guidance only; confirmed by site inspection in Surat." />
+<meta property="og:url" content="https://miliwaterproofing.in/leak-tool/" />
+<meta name="twitter:card" content="summary" />
+<meta name="theme-color" content="#0a192f" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Leak Assessment Tool","url":"https://miliwaterproofing.in/leak-tool/","applicationCategory":"UtilityApplication","operatingSystem":"All","browserRequirements":"Requires JavaScript. Requires HTML5.",
+"creator":{"@type":"HomeAndConstructionBusiness","name":"Mili Waterproofing","telephone":"+919714343034","url":"https://miliwaterproofing.in/","address":{"@type":"PostalAddress","addressLocality":"Surat","addressRegion":"Gujarat","addressCountry":"IN"},"areaServed":{"@type":"City","name":"Surat"}},
+"description":"Preliminary, non-diagnostic guidance on likely causes of terrace seepage, wall dampness, bathroom leakage, concealed pipe leaks and water tank leaks in Surat."}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/x-icon" href="../favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<style>
+div[data-netlify-badge],.netlify-badge,iframe[title*="Netlify"],#netlify-badge{display:none!important}
+:root{--bg:#F8FAFC;--fg:#0F172A;--muted:#475569;--faint:#64748B;--card:#fff;--border:#E2E8F0;--primary:#0284C7;--primary-strong:#0369A1;--primary-soft:#F0F9FF;--primary-border:#BAE6FD;--wa:#25D366;--wa2:#1EBE5D;--danger:#DC2626;--danger-soft:#FEF2F2;--danger-border:#FECACA;--danger-text:#991B1B;--amber-soft:#FEF3C7;--amber-text:#92400E;--amber-border:#FCD34D;--sky-soft:#E0F2FE;--sky-text:#0369A1;--sky-border:#BAE6FD;--teal-soft:#F0FDFA;--teal-text:#0F766E;--teal-border:#99F6E4;--dark:#0F172A;--radius:14px;--shadow:0 1px 2px rgba(15,23,42,.05);--shadow-lg:0 8px 24px rgba(15,23,42,.08);--fb:"Plus Jakarta Sans",system-ui,-apple-system,sans-serif;--fh:"Outfit",var(--fb)}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;overflow-x:hidden}
+body{min-height:100vh;display:flex;flex-direction:column;font-family:var(--fb);background:var(--bg);color:var(--fg);line-height:1.6;font-size:15px}
+main{flex:1;width:100%;overflow-x:hidden;outline:none}
+h1,h2,h3,h4{font-family:var(--fh);letter-spacing:-.02em;line-height:1.25}
+a{color:inherit;text-decoration:none}
+svg{display:block}.i{width:18px;height:18px}
+:focus-visible{outline:3px solid #F59E0B;outline-offset:2px}
+.container{width:100%;max-width:1152px;margin:0 auto;padding:0 16px}
+@media(min-width:640px){.container{padding:0 28px}}
+.site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.98);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:8px;height:64px}
+.brand{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:16px;font-family:var(--fh)}
+.brand-mark{display:inline-flex;width:34px;height:34px;border-radius:8px;background:var(--primary);color:#fff;align-items:center;justify-content:center;flex-shrink:0}
+.brand-name em{font-style:normal;color:var(--primary)}
+.brand-location{font-size:11px;font-weight:600;background:#E2E8F0;padding:2px 7px;border-radius:999px;color:var(--muted)}
+.site-nav{display:flex;align-items:center;gap:8px}
+.nav-link{padding:6px 10px;border-radius:8px;font-size:13px;font-weight:600;color:var(--muted)}
+.nav-link:hover{color:var(--fg);background:#F1F5F9}
+.mobile-nav{display:none;background:#fff;border-bottom:1px solid var(--border);padding:8px 16px;gap:8px;overflow-x:auto}
+.mobile-nav a{white-space:nowrap;font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px;border:1px solid var(--border);color:var(--muted)}
+.mobile-nav a.em{border-color:var(--danger-border);color:var(--danger-text);background:var(--danger-soft)}
+@media(max-width:768px){.desk-only{display:none!important}.mobile-nav{display:flex}.brand-location{display:none}}
+.site-footer{background:#fff;border-top:1px solid var(--border);margin-top:40px;padding-bottom:70px}
+.footer-inner{display:flex;flex-direction:column;gap:16px;padding:32px 0}
+@media(min-width:640px){.footer-inner{flex-direction:row;align-items:flex-start;justify-content:space-between}}
+.footer-nav{display:flex;gap:16px;font-size:13px;color:var(--muted);flex-wrap:wrap}
+.footer-note{font-size:13px;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid transparent;border-radius:10px;font-weight:600;font-size:14px;padding:10px 16px;cursor:pointer;transition:all .2s;font-family:inherit}
+.btn-block-mob{width:100%}@media(min-width:640px){.btn-block-mob{width:auto}}
+.btn-sm{padding:7px 14px;font-size:13px}.btn-lg{padding:12px 20px;font-size:15px}
+.btn-primary{background:var(--primary);color:#fff}.btn-primary:hover{background:var(--primary-strong)}
+.btn-whatsapp{background:#128C4A;color:#fff}.btn-whatsapp:hover{background:#0E7A40}
+.btn-danger{background:var(--danger);color:#fff}.btn-danger:hover{background:#B91C1C}
+.btn-outline{background:#fff;border-color:var(--border);color:var(--fg)}.btn-outline:hover{background:#F8FAFC;border-color:#CBD5E1}
+.badge{display:inline-flex;align-items:center;gap:4px;border-radius:999px;border:1px solid;padding:3px 10px;font-size:11px;font-weight:700}
+.badge-minor{background:var(--sky-soft);color:var(--sky-text);border-color:var(--sky-border)}
+.badge-moderate{background:var(--amber-soft);color:var(--amber-text);border-color:var(--amber-border)}
+.badge-emergency{background:#FEE2E2;color:var(--danger-text);border-color:#FCA5A5}
+.hero{background:var(--dark);color:#F8FAFC}
+.hero-inner{padding:42px 0 36px}@media(min-width:640px){.hero-inner{padding:64px 0 54px}}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:#0C4A6E;color:#BAE6FD;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
+.hero h1{font-size:clamp(26px,6vw,44px);font-weight:800;margin-top:14px;max-width:760px}
+.hero p{margin-top:12px;max-width:640px;color:#CBD5E1;font-size:15px}
+.hero-actions{margin-top:22px;display:flex;flex-direction:column;gap:10px}
+@media(min-width:640px){.hero-actions{flex-direction:row;flex-wrap:wrap}}
+.hero-meta{margin-top:20px;font-size:13px;color:#CBD5E1;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.hero-meta span{display:inline-flex;gap:6px;align-items:center}
+.strip{background:var(--danger-soft);border-bottom:1px solid var(--danger-border)}
+.strip-inner{display:flex;flex-direction:column;gap:10px;padding:14px 0;align-items:flex-start}
+@media(min-width:640px){.strip-inner{flex-direction:row;align-items:center;justify-content:space-between}}
+.strip-msg{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--danger-text)}
+.strip-msg svg{color:var(--danger);flex-shrink:0}
+.strip-actions{display:flex;gap:8px;width:100%}@media(min-width:640px){.strip-actions{width:auto}}
+.section{padding:40px 0}
+.section-head h2{font-size:clamp(22px,4vw,28px);font-weight:800}
+.section-head p{margin-top:6px;color:var(--muted);font-size:14px}
+.cards-grid{margin-top:24px;display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:640px){.cards-grid{grid-template-columns:1fr 1fr}}@media(min-width:1024px){.cards-grid{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;display:flex;flex-direction:column;transition:transform .2s,border-color .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--primary-border)}
+.card-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.icon-chip{display:inline-flex;width:40px;height:40px;border-radius:10px;background:var(--primary-soft);color:var(--primary-strong);align-items:center;justify-content:center;flex-shrink:0}
+.card h3{font-size:16px;margin-top:12px;font-weight:700}
+.card p{color:var(--muted);font-size:13px;margin-top:6px;flex:1;line-height:1.5}
+.card-cta{display:inline-flex;align-items:center;gap:6px;margin-top:16px;color:var(--primary-strong);font-size:13px;font-weight:700}
+.detail{padding:24px 0 44px}
+.back-link{display:inline-flex;align-items:center;gap:6px;color:var(--muted);font-size:13px;font-weight:600}
+.detail-head{display:flex;flex-direction:column;gap:12px;margin-top:16px}
+@media(min-width:640px){.detail-head{flex-direction:row;justify-content:space-between;align-items:flex-start}}
+.detail-title{display:flex;gap:14px;align-items:flex-start}
+.detail-title h1{font-size:clamp(22px,4vw,28px)}
+.detail-summary{color:#334155;margin-top:16px}
+.detail-grid{display:grid;gap:24px;margin-top:28px;grid-template-columns:1fr}
+@media(min-width:1024px){.detail-grid{grid-template-columns:2fr 1fr}}
+.detail-section h2{font-size:18px;margin-bottom:12px;font-weight:700}
+.detail-section+.detail-section{margin-top:28px}
+.tick-list,.dot-list{list-style:none;display:flex;flex-direction:column;gap:8px}
+.tick-list li,.dot-list li{display:flex;gap:8px;color:#334155;font-size:14px}
+.dot-list li::before{content:"•";color:var(--primary)}
+.tick-list svg{width:16px;height:16px;color:var(--primary);flex-shrink:0;margin-top:4px}
+.steps{list-style:none}
+.steps li{display:flex;gap:12px;padding-bottom:22px;position:relative}
+.steps li:last-child{padding-bottom:0}
+.steps li:not(:last-child)::before{content:"";position:absolute;left:15px;top:34px;bottom:2px;width:2px;background:var(--primary-border)}
+.step-num{width:32px;height:32px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0}
+.steps h3{font-size:15px}.steps p{color:var(--muted);font-size:13px;margin-top:3px}
+.side{display:flex;flex-direction:column;gap:16px}
+.panel{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px}
+.panel h3{font-size:15px;display:flex;align-items:center;gap:8px;font-weight:700}
+.panel ul{list-style:none;margin-top:8px;display:flex;flex-direction:column;gap:6px}
+.panel li{font-size:13px;display:flex;gap:6px}
+.panel-danger{background:var(--danger-soft);border-color:var(--danger-border)}
+.panel-danger h3,.panel-danger li{color:var(--danger-text)}
+.panel-contact{background:var(--primary-soft);border-color:var(--primary-border)}
+.check-row{display:flex;gap:8px;align-items:flex-start;padding:4px 0}
+.check-row input,.em-item input{width:18px;height:18px;margin-top:3px;accent-color:var(--primary);flex-shrink:0}
+.check-row label{font-size:13px;color:#334155}
+.wizard-wrap{width:100%;max-width:660px;margin:0 auto;padding:32px 16px}
+.wizard-wrap h1{font-size:26px;font-weight:800}
+.progress-dots{display:flex;gap:8px;justify-content:center;margin-top:18px}
+.progress-dots span{width:48px;height:6px;border-radius:999px;background:var(--border)}
+.progress-dots span.current{background:var(--primary)}.progress-dots span.done{background:#0D9488}
+.step-card,.result-card{margin-top:22px;background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+.result-card{box-shadow:var(--shadow-lg)}
+.options{display:flex;flex-direction:column;gap:12px;margin-top:18px}
+.option{display:flex;align-items:center;gap:12px;min-height:52px;background:#fff;border:1px solid var(--border);border-radius:10px;padding:12px 16px;text-align:left;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;font-family:inherit;color:var(--fg)}
+.option:hover{border-color:var(--primary);background:var(--primary-soft);color:var(--primary-strong)}
+.option .arrow{margin-left:auto;color:var(--faint)}
+.wizard-back{margin-top:16px;display:inline-flex;align-items:center;gap:6px;background:none;border:none;color:var(--muted);font-size:13px;font-weight:600;cursor:pointer;font-family:inherit}
+.actions-box{margin-top:18px;background:var(--primary-soft);border:1px solid var(--primary-border);border-radius:10px;padding:16px}
+.actions-box h3{font-size:14px;color:var(--primary-strong)}
+.actions-box ul{list-style:none;margin-top:8px;display:flex;flex-direction:column;gap:8px}
+.actions-box li{display:flex;gap:8px;font-size:13px;color:#1E293B;line-height:1.5}
+.actions-box li svg{flex-shrink:0;margin-top:3px;width:16px;height:16px;color:var(--primary)}
+.em-hero{background:var(--danger-soft);border-bottom:1px solid var(--danger-border)}
+.em-hero-inner{padding:32px 0}
+.em-hero h1{color:var(--danger-text);font-size:clamp(22px,5vw,30px);margin-top:10px;font-weight:800}
+.em-grid{display:grid;gap:24px;grid-template-columns:1fr;padding:28px 0 44px}
+@media(min-width:1024px){.em-grid{grid-template-columns:7fr 5fr}}
+.progress-track{height:6px;background:#FEE2E2;border-radius:999px;overflow:hidden;margin-top:10px}
+.progress-fill{height:100%;background:var(--danger);transition:width .3s}
+.em-list{list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:10px}
+.em-item{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:14px;display:flex;gap:10px}
+.em-item.done{background:var(--teal-soft);border-color:var(--teal-border)}
+.disclaimer{font-size:12px;color:var(--faint);margin-top:12px;line-height:1.5}
+.float-wa{position:fixed;bottom:16px;right:16px;z-index:100;display:inline-flex;align-items:center;gap:6px;background:#128C4A;color:#fff;padding:10px 18px;border-radius:50px;font-weight:700;font-size:13px;box-shadow:0 4px 16px rgba(18,140,74,.4)}
+.toast{position:fixed;bottom:70px;right:16px;z-index:100;background:var(--dark);color:#F8FAFC;padding:10px 14px;border-radius:10px;font-size:13px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#/">
-        <span class="brand-mark"></span>
-        <span class="brand-name">Mili <em>Waterproofing</em></span>
-        <span class="brand-location">Surat</span>
-      </a>
-      <nav class="site-nav">
-        <a href="#/guides" class="nav-link">Solutions</a>
-        <a href="#/wizard" class="btn btn-outline btn-sm nav-hide-mob">Leak Assessment</a>
-        <a href="#/emergency" class="btn btn-danger btn-sm nav-hide-mob">Active Leak?</a>
-        <a href="tel:9714343034" class="btn btn-primary btn-sm header-call-btn">Call 9714343034</a>
-      </nav>
-    </div>
-  </header>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#/"><span class="brand-mark"></span><span class="brand-name">Mili <em>Waterproofing</em></span><span class="brand-location">Surat</span></a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="#/guides" class="nav-link desk-only">Solutions</a>
+      <a href="#/wizard" class="btn btn-outline btn-sm desk-only">Leak Assessment</a>
+      <a href="#/emergency" class="btn btn-danger btn-sm desk-only">Active Leak?</a>
+      <a href="tel:+919714343034" class="btn btn-primary btn-sm">Call 9714343034</a>
+    </nav>
+  </div>
+  <nav class="mobile-nav" aria-label="Mobile">
+    <a href="#/guides">Solutions</a><a href="#/wizard">Leak Assessment</a><a href="#/emergency" class="em">Active Leak?</a>
+  </nav>
+</header>
 
-  <!-- Main Container: Static H1 provides instant crawlbility for Bingbot -->
-  <main id="app">
-    <section class="hero">
-      <div class="container hero-inner">
-        <span class="hero-badge">Mili Waterproofing · Surat</span>
-        <h1>Smart Leak Assessment & Diagnostic Tool Surat</h1>
-        <p>Identify terrace seepage, concealed pipe leaks, and bathroom dampness across Surat. We combine proven waterproofing engineering with advanced Non-Destructive Electronic Leak Diagnostics.</p>
-        <div class="hero-actions">
-          <a class="btn btn-whatsapp btn-lg btn-block-mob" href="https://wa.me/919714343034?text=Hello%20Mili%20Waterproofing%2C%20I%20need%20a%20leakage%20inspection%20in%20Surat." target="_blank">Book Inspection on WhatsApp</a>
-          <a class="btn btn-primary btn-lg btn-block-mob" href="#/wizard">Smart Leak Diagnostic Tool</a>
-          <a class="btn btn-danger btn-lg btn-block-mob" href="#/emergency">Active Leak? Safety Steps</a>
-        </div>
+<main id="app" tabindex="-1">
+  <section class="hero">
+    <div class="container hero-inner">
+      <span class="hero-badge">Mili Waterproofing · Surat</span>
+      <h1>Leak Assessment Tool for Surat Homes</h1>
+      <p>Find the likely source of terrace seepage, wall dampness, bathroom leakage, concealed pipe leaks or tank leaks, and get safe first steps. This is preliminary guidance; the real cause is confirmed at a site inspection.</p>
+      <div class="hero-actions">
+        <a class="btn btn-whatsapp btn-lg btn-block-mob" href="https://wa.me/919714343034?text=Hello%20Mili%20Waterproofing%2C%20I%20need%20a%20leakage%20inspection%20in%20Surat." target="_blank" rel="noopener">Book Inspection on WhatsApp</a>
+        <a class="btn btn-primary btn-lg btn-block-mob" href="#/wizard">Start Leak Assessment</a>
+        <a class="btn btn-danger btn-lg btn-block-mob" href="#/emergency">Active Leak? Safety Steps</a>
       </div>
-    </section>
-  </main>
-
-  <a class="float-wa" href="https://wa.me/919714343034?text=Hello%20Mili%20Waterproofing%2C%20I%20have%20a%20leakage%20issue%20in%20Surat.%20Please%20guide%20me." target="_blank">
-    <svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-    <span>WhatsApp Us</span>
-  </a>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>
-        <div class="brand">
-          <span class="brand-mark"></span>
-          <span class="brand-name">Mili <em>Waterproofing</em></span>
-          <span class="brand-location">Surat</span>
-        </div>
-        <p class="footer-note" style="margin-top:6px;">Specialized in Structural Waterproofing & Advanced Non-Destructive Leak Detection Across Surat.</p>
-        <p class="footer-note" style="color:var(--faint);font-size:12px;">*We specialize in structural waterproofing and concealed pipeline leak tracing. We do not provide basic sanitary tap/faucet plumbing maintenance.</p>
-        <p class="footer-note" style="margin-top:4px;">Helpline: <strong>+91 9714343034</strong></p>
-      </div>
-      <nav class="footer-nav">
-        <a href="#/guides">Solutions</a>
-        <a href="#/wizard">Diagnostic Tool</a>
-        <a href="#/emergency">Emergency Steps</a>
-        <a href="tel:9714343034">Contact</a>
-      </nav>
     </div>
-  </footer>
+  </section>
+  <section class="section"><div class="container">
+    <h2>What we help with in Surat</h2>
+    <ul style="margin-top:12px;padding-left:20px;color:var(--muted)">
+      <li>Terrace and roof slab waterproofing</li><li>Wall dampness and efflorescence treatment</li><li>Bathroom and balcony leakage repair</li><li>Concealed pipe leak detection</li><li>Overhead and underground water tank waterproofing</li>
+    </ul>
+    <noscript><p style="margin-top:12px">Please enable JavaScript to use the interactive assessment, or call 9714343034.</p></noscript>
+  </div></section>
+</main>
 
-  <div id="toast" class="toast" hidden></div>
+<a class="float-wa" href="https://wa.me/919714343034?text=Hello%20Mili%20Waterproofing%2C%20I%20have%20a%20leakage%20issue%20in%20Surat.%20Please%20guide%20me." target="_blank" rel="noopener" aria-label="Chat with Mili Waterproofing on WhatsApp">
+  <svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
+  <span>WhatsApp Us</span>
+</a>
 
-  <script>
-const ICONS = {
-  droplet: '<path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/>',
-  layers: '<path d="m12 2 10 5-10 5L2 7l10-5z"/><path d="m2 12 10 5 10-5"/><path d="m2 17 10 5 10-5"/>',
-  brick: '<rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 9.7h18M3 14.3h18M9 5v4.7M15 5v4.7M6 9.7v4.7M12 9.7v4.7M18 9.7v4.7M9 14.3V19M15 14.3V19"/>',
-  wrench: '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>',
-  bath: '<path d="M3 12h18v2.5a4.5 4.5 0 0 1-4.5 4.5h-9A4.5 4.5 0 0 1 3 14.5V12z"/><path d="M6 12V5.5A1.5 1.5 0 0 1 7.5 4h.5a2 2 0 0 1 2 2"/><path d="M7 19v2M17 19v2"/>',
-  rain: '<path d="M4 14.9A7 7 0 1 1 15.7 8h1.8a4.5 4.5 0 0 1 2.4 8.3"/><path d="M16 14v6M8 14v6M12 16v6"/>',
-  alert: '<path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/>',
-  shield: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
-  checkCircle: '<circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/>',
-  arrowRight: '<path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>',
-  arrowLeft: '<path d="M19 12H5"/><path d="m12 19-7-7 7-7"/>',
-  phone: '<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>',
-  pin: '<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/>',
-  camera: '<path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/>',
-  restart: '<path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/>',
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <div class="brand"><span class="brand-mark"></span><span class="brand-name">Mili <em>Waterproofing</em></span></div>
+      <p class="footer-note" style="margin-top:6px">Structural waterproofing and concealed pipeline leak tracing. Service area: Surat, Gujarat.</p>
+      <p class="footer-note" style="font-size:12px">We do not provide routine tap, faucet or sanitary plumbing maintenance.</p>
+      <p class="footer-note" style="margin-top:4px">Helpline: <strong>+91 9714343034</strong></p>
+      <p class="footer-note" style="font-size:12px;margin-top:4px">This tool gives general guidance only and is not a diagnosis. Scope, cost and any warranty are discussed after a site inspection.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer"><a href="#/guides">Solutions</a><a href="#/wizard">Assessment</a><a href="#/emergency">Emergency Steps</a><a href="tel:+919714343034">Contact</a></nav>
+  </div>
+</footer>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+<script>
+const PHONE="919714343034";
+const ICONS={
+droplet:'<path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/>',
+layers:'<path d="m12 2 10 5-10 5L2 7l10-5z"/><path d="m2 12 10 5 10-5"/><path d="m2 17 10 5 10-5"/>',
+brick:'<rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 9.7h18M3 14.3h18M9 5v4.7M15 5v4.7M6 9.7v4.7M12 9.7v4.7M18 9.7v4.7M9 14.3V19M15 14.3V19"/>',
+wrench:'<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>',
+bath:'<path d="M3 12h18v2.5a4.5 4.5 0 0 1-4.5 4.5h-9A4.5 4.5 0 0 1 3 14.5V12z"/><path d="M6 12V5.5A1.5 1.5 0 0 1 7.5 4h.5a2 2 0 0 1 2 2"/><path d="M7 19v2M17 19v2"/>',
+rain:'<path d="M4 14.9A7 7 0 1 1 15.7 8h1.8a4.5 4.5 0 0 1 2.4 8.3"/><path d="M16 14v6M8 14v6M12 16v6"/>',
+alert:'<path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/>',
+shield:'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
+check:'<circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/>',
+right:'<path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>',
+left:'<path d="M19 12H5"/><path d="m12 19-7-7 7-7"/>',
+phone:'<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>',
+pin:'<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/>',
+camera:'<path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/>',
+restart:'<path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/>'};
+const svg=n=>'<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+(ICONS[n]||ICONS.droplet)+'</svg>';
+const wa=t=>"https://wa.me/"+PHONE+"?text="+encodeURIComponent(t);
+
+const POWER="If water is near switches, wiring, lights or fans, switch off that room's circuit at the MCB with dry hands, without standing in water. If you cannot do this safely, call an electrician.";
+const GUIDES=[
+{slug:"terrace-roof-waterproofing",title:"Terrace & Roof Slab Waterproofing",icon:"rain",subtitle:"Dripping slabs, efflorescence rings, terrace puddles and parapet cracks",severity:"moderate",
+summary:"Ceiling dampness is often not directly below the terrace crack, because water can travel sideways inside the slab. Treatment usually covers the terrace surface, parapet junctions and rainwater outlets, using a crack-sealing and membrane system suited to the site.",
+symptoms:["Water drips or seeps from the ceiling during or after rain","Yellow-brown stains, bubbling paint or white powder (efflorescence) on the ceiling","Bulging plaster or a false ceiling holding water","Standing water on the terrace near parapets or blocked outlets","Dripping on dry days, which can point to a tank or pipe source rather than rain"],
+causes:["Shrinkage or hairline cracks in the terrace screed or slab","Weak joints where the slab meets the parapet wall","Blocked or poorly sealed rainwater outlets","Worn tile grout or porous brick-bat coba layer","Supply pipes running across the terrace slab"],
+safety:[POWER,"Do not stand under bulging plaster or a water-filled false ceiling.","Take care on the terrace in the rain: algae near standing water is slippery."],
+emergency:[POWER,"Place buckets or tubs under the drips and move furniture and electronics away.","Keep clear of a bulging ceiling or paint. Do not poke it; it can collapse. Keep the area closed off until it is checked.","If water drips on a dry day, close the overhead tank outlet valve."],
+steps:[{t:"Inspection & cleaning",d:"Clean the terrace of moss, loose material and debris, and check every rainwater outlet for blockage."},{t:"Crack chasing",d:"Open visible cracks into a small V-groove and clear out the dust."},{t:"Flexible crack sealing",d:"Fill the grooves with a flexible polymer sealant or repair mortar suited to the crack movement."},{t:"Parapet junction coving",d:"Form a small angled fillet where the slab meets the parapet so water does not pool in the corner."},{t:"Membrane coating",d:"Apply a UV-resistant waterproofing coating in coats as specified by the product maker, with reinforcement mesh over cracks and joints where needed."},{t:"Curing and ponding test",d:"Allow the curing time given by the product maker, then pond water on the terrace for the test period and check below for any dampness."}],
+call_pro:["Cracks show rusted, exposed steel bars or flaking concrete","Seepage continues without rain","The whole terrace finish is hollow or debonded and may need full re-waterproofing"]},
+{slug:"wall-dampness-treatment",title:"Wall Dampness & Efflorescence Treatment",icon:"brick",subtitle:"Peeling paint, white salt powder, rising damp and skirting moisture",severity:"moderate",
+summary:"Wall dampness can come from a concealed pipe leak, rainwater entering through external cracks, leaks from a neighbouring wet area, or moisture rising from the ground. The source must be identified first, otherwise repainting will fail again.",
+symptoms:["Paint bubbles, flakes or shows brown watermarks","White powdery salt (efflorescence) on the plaster","A damp patch growing behind bathrooms or kitchens, or along the skirting","Musty smell and mould behind wardrobes, beds or cabinets"],
+causes:["A pipe joint or pinhole leak inside the wall","Worn grout or joints in an adjacent shower or kitchen area","External plaster cracks letting in rain","Moisture rising from the ground where there is no working damp proof course"],
+safety:["Keep power off to switchboards on a damp wall: moisture raises the risk of shock.","Do not paint or putty over damp plaster; it traps moisture."],
+emergency:["Switch off the MCB for sockets and switches on the damp wall.","Move wooden furniture and fabrics about 15 cm (6 in) away from the wall."],
+steps:[{t:"Moisture mapping",d:"Check the damp area with a moisture meter or similar tool to trace where the moisture is coming from."},{t:"Water meter check",d:"With all taps closed, watch the water meter to see whether a pressurised line is leaking."},{t:"Remove damaged plaster",d:"Remove blistered paint and loose plaster beyond the damp patch, down to sound masonry."},{t:"Salt treatment",d:"Brush off salts and treat the masonry as per the product maker's directions."},{t:"Waterproof slurry",d:"Apply a polymer or crystalline waterproofing slurry to the prepared surface."},{t:"Re-plastering",d:"Re-plaster with a mortar containing a waterproofing admixture, then finish once fully dry."}],
+call_pro:["A concealed pipe joint needs to be pinpointed and repaired","Damp is widespread at ground-floor plinth level","Heavy mould is affecting the air indoors"]},
+{slug:"bathroom-leakage-repair",title:"Bathroom & Balcony Leakage Repair",icon:"bath",subtitle:"Seepage to the ceiling below, sunken slab moisture and tile joint leaks",severity:"moderate",
+summary:"Bathroom seepage often comes from worn tile joints or gaps around the floor drain, letting water into the slab. Depending on the cause, repair can often be done with epoxy joint filling and sealing, and sometimes injection grouting, without removing all the tiles.",
+symptoms:["Damp or peeling paint on the ceiling directly below the bathroom","Moisture along outer walls near the bathroom","Black mould in tile joints and shower corners","Water stains on plumbing shafts"],
+causes:["Worn or washed-out tile grout","A gap between the tiles and the floor drain collar","A concealed pipe, diverter or flush tank leaking behind the wall tiles"],
+safety:["Turn off the exhaust fan and geyser if moisture is visible near their wiring."],
+emergency:["Stop washing the floor and using the suspect bathroom until it is checked.","If the leak seems constant, close the water supply to that bathroom."],
+steps:[{t:"Inspection",d:"Map the damp on the ceiling below to judge whether the source is a continuous supply leak or drainage/grout related."},{t:"Joint raking",d:"Remove weak grout from the tile joints and clean them."},{t:"Epoxy grouting",d:"Fill the joints with a waterproof epoxy tile grout."},{t:"Drain collar sealing",d:"Seal the junction between tiles and the drain trap with a flexible sealant."},{t:"Injection grouting (if needed)",d:"For active seepage through the slab, injection packers and resin can be used to stop the flow."}],
+call_pro:["Dripping below continues all day and night","A concealed diverter or flush tank is leaking behind tiles"]},
+{slug:"concealed-pipe-leakage",title:"Concealed Pipe Leak Detection",icon:"wrench",subtitle:"Hidden line leaks, joint failure and pressure drops with minimal breaking",severity:"emergency",
+summary:"Hidden pipe leaks can damage plaster, tiles and the structure over time. The aim is to locate the leak as precisely as possible with non-destructive methods, so only a small area needs to be opened.",
+symptoms:["The water meter keeps moving even when all taps are closed","A sudden rise in the water bill, or the tank emptying fast","A hissing sound behind a wall","A warm or cold patch on a wall or floor"],
+causes:["A failed joint on a concealed CPVC/PVC line","A corrosion pinhole in an old GI pipe","A pipe punctured by a drill or nail"],
+safety:["Close the main water supply once you are sure water is flowing continuously.",POWER],
+emergency:["Close the terrace tank outlet valve or the main stopcock.","After closing it, open the lowest tap to drain the pipes so water stops feeding the leak."],
+steps:[{t:"Meter & pressure test",d:"Isolate lines and note whether the water meter moves to confirm a pressurised leak."},{t:"Diagnostic scan",d:"Trace the pipe layout and use detection equipment to estimate the leak location."},{t:"Minimal opening",d:"Open only the tiles or plaster at the pinpointed spot."},{t:"Repair & pressure test",d:"Replace the damaged section or fitting and pressure test the line."},{t:"Reinstatement",d:"Waterproof the repaired area before refixing tiles."}],
+call_pro:["A main riser pipe is leaking inside a building duct","The pipe runs under expensive stone or vitrified flooring that you want to protect"]},
+{slug:"water-tank-waterproofing",title:"Overhead & Underground Tank Waterproofing",icon:"layers",subtitle:"Tank cracks, sump seepage and dampness under tank staging",severity:"moderate",
+summary:"Tank leaks can damage terrace slabs and basements. Repair usually involves crack treatment, sealing pipe connections and applying a coating that is certified safe for drinking water where the tank holds potable water.",
+symptoms:["A wet patch on the terrace under the tank or its base","The tank level drops overnight with no usage","Groundwater entering an underground sump or basement"],
+causes:["Cracks in tank walls from water pressure","Failed internal waterproofing or plaster","Leaking outlet, inlet or union fittings"],
+safety:["For drinking water tanks, use only products rated safe for potable water.","Never enter an underground tank without ventilation and another person present."],
+emergency:["Switch off the pump and close the tank inlet valve.","If the base is leaking heavily, lower the water level below the leak."],
+steps:[{t:"Drain & wash",d:"Empty the tank and clean the walls of algae and loose mortar."},{t:"Crack treatment",d:"Open cracks and joints and fill with a suitable repair mortar."},{t:"Fitting seals",d:"Re-seal the inlet, outlet and overflow fittings with potable-water-safe sealant."},{t:"Potable-safe coating",d:"Apply a waterproofing coating rated for drinking water, as directed by the product maker."},{t:"Cure & rinse",d:"Allow the curing time specified, then rinse well before refilling."}],
+call_pro:["Large cracks in the tank staging columns","An underground tank has seepage from outside water pressure"]}
+];
+const EMERGENCY_STEPS=[
+{t:"Make electricity safe first",d:POWER+" Never touch switches with wet hands."},
+{t:"Work out the source: rain or plumbing",d:"If it leaks only in rain, suspect the terrace or walls. If it drips on a dry, sunny day, suspect a tank or pipe and close the overhead tank outlet valve."},
+{t:"Close the main water stopcock",d:"For a suspected pipe leak, close the terrace tank outlet or the main building stopcock by turning it clockwise."},
+{t:"Drain the pipes",d:"After closing the main valve, open the lowest tap (such as an outdoor wash tap) so water drains out rather than pooling in walls."},
+{t:"Contain the water and keep clear of bulges",d:"Place a bucket under drips and move belongings away. Do not poke or stand under a bulging ceiling or paint; it can give way. Keep people out of that area."},
+{t:"Clear terrace rainwater outlets",d:"If roof seepage occurs in rain, and it is safe to go up, clear leaves and silt from the drains so water does not pond."},
+{t:"Contact Mili Waterproofing in Surat",d:"Take clear photos or a short video of the leak and its spread, then call 9714343034 or send them on WhatsApp."}];
+
+const Q_LOC={key:"location",q:"Where is the water or moisture visible?",h:"Choose the main area where you see it.",opts:[
+["terrace-roof-waterproofing","Terrace / roof / ceiling seepage","rain"],["wall-dampness-treatment","Wall dampness, peeling paint or white powder","brick"],["bathroom-leakage-repair","Bathroom, sunken slab or balcony","bath"],["concealed-pipe-leakage","Suspected hidden pipe leak","wrench"],["water-tank-waterproofing","Water tank or basement sump","layers"]]};
+const TIMING={
+"terrace-roof-waterproofing":[["rain","Only during or just after rain"],["dry","Also on dry, sunny days"],["unsure","Not sure"]],
+"wall-dampness-treatment":[["rain","Gets worse after rain (often an outer wall)"],["wet","Wall is next to a bathroom or kitchen"],["continuous","Stays wet all the time, rain or not"],["rising","Dampness is near floor level"]],
+"bathroom-leakage-repair":[["use","Mainly after the bathroom is used or washed"],["continuous","All the time, even when not in use"],["unsure","Not sure"]],
+"concealed-pipe-leakage":[["meter","Water meter moves with all taps closed"],["bill","Unusual bill rise or tank empties fast"],["sound","Hissing sound or a warm/cold wall spot"]],
+"water-tank-waterproofing":[["level","Tank level drops with no usage"],["base","Wet patch under the tank or its base"],["ground","Water enters a sump or basement, mostly after rain"]]};
+const Q_TIME={key:"timing",q:"When does it happen?",h:"This helps separate rain seepage from plumbing leaks."};
+const Q_INT={key:"intensity",q:"How much water is there?",h:"This sets how urgent it is.",opts:[["active","Active flow or heavy dripping"],["slow","Slow, occasional drip"],["damp","No drip, only a damp patch, peeling paint or powder"]]};
+const INT_LABEL={active:"Active flow or heavy dripping",slow:"Slow drip",damp:"Damp patch only"};
+
+// [note, pressurised/plumbing source?, extra actions]
+const DIAG={
+"terrace-roof-waterproofing":{
+ rain:["Leaks that appear only with rain usually point to cracks in the slab or screed, weak slab-to-parapet joints or blocked rainwater outlets.",false,["Photograph the stains and note which rooms and walls are affected.","Clear terrace outlets if it is dry and safe to do so."]],
+ dry:["Dripping on dry days suggests a stored or pressurised water source, such as the overhead tank, its pipes, a line across the slab, or a leak from the floor above.",true,["Close the overhead tank outlet valve and see whether the dripping slows.","Check the water meter with all taps closed."]],
+ unsure:["The pattern is not clear. It could be rain entering through the slab or a plumbing source. Note whether it stops after a few dry days.",false,["Keep a short log of dates and weather when the leak appears."]]},
+"wall-dampness-treatment":{
+ rain:["Damp that worsens after rain usually means water is entering through external plaster cracks, joints around windows or the parapet.",false,["Look for cracks on the outside of that wall and around windows.","Do not repaint until the source is fixed."]],
+ wet:["Dampness next to a bathroom or kitchen often comes from worn tile joints, a drain collar or a concealed pipe on the other side.",false,["Check the water meter with all taps closed.","Avoid washing the adjoining floor with a lot of water until it is checked."]],
+ continuous:["Damp that never dries, whatever the weather, can point to a concealed pressurised pipe leak inside the wall.",true,["Check the water meter with all taps closed.","Close the main water supply if the meter keeps moving."]],
+ rising:["Dampness near floor level, with salt marks, often indicates moisture rising from the ground where the damp proof course has failed or is missing.",false,["Keep soil, planters and wet mopping away from that wall.","Do not seal it with putty or oil paint."]]},
+"bathroom-leakage-repair":{
+ use:["Seepage that appears after bathroom use points to worn tile joints, gaps around the drain collar or a leaking waste connection.",false,["Reduce floor washing in that bathroom for now.","If the leak is into a neighbour's flat, let them know and ask for access."]],
+ continuous:["Constant seepage even when the bathroom is unused suggests a pressurised source, such as a supply pipe, concealed diverter or flush tank.",true,["Close the water supply to that bathroom if you can.","Check the water meter with all taps closed."]],
+ unsure:["The pattern is unclear. It may be joints or drainage, or a supply line.",false,["Note whether the damp grows after use or stays constant."]]},
+"concealed-pipe-leakage":{
+ meter:["A meter that moves with every tap closed is a strong sign of a leak in a pressurised line.",true,["Close the main water supply and check whether the meter stops.","Do not drill or break walls to chase the leak yourself."]],
+ bill:["A sudden rise in the bill or a tank that empties quickly can indicate a leak, though other causes such as overflow or a faulty float valve are possible.",true,["Check the tank float valve and overflow pipe.","Do a meter test with all taps closed."]],
+ sound:["A hissing sound or an odd warm or cold spot can indicate a leaking pipe behind the wall or floor.",true,["Note the location and photograph it.","Close the main supply if the area is getting wet."]]},
+"water-tank-waterproofing":{
+ level:["A tank that loses water with no usage suggests a leak in the tank, its fittings or the connected pipes.",true,["Close the outlet valve overnight and check whether the level still drops.","Check around the pump, valves and pipe joints."]],
+ base:["A wet patch under the tank suggests leakage from the base, fittings or outlet connections.",true,["Look at the outlet and overflow connections for weeping.","Lower the water level if the leak is heavy."]],
+ ground:["Water entering a sump or basement mainly after rain suggests groundwater pressure through walls or joints.",false,["Check drains around the building for blockage.","Do not enter an underground tank without ventilation and another person present."]]}
 };
-function svg(n) { return '<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' + (ICONS[n] || ICONS.droplet) + '</svg>'; }
+function advice(a){
+ const g=GUIDES.find(x=>x.slug===a.location),d=DIAG[a.location][a.timing],i=a.intensity;
+ const plumbing=d[1];let sev;
+ if(plumbing) sev=i==="damp"?"moderate":"emergency";
+ else sev=i==="damp"?"minor":"moderate";
+ const act=[];
+ if(i==="active"||(plumbing&&i!=="damp")) act.push(POWER);
+ if(i==="active") act.push("Contain the water with buckets and move belongings and electronics away.");
+ if(i==="damp") act.push("Mark the edge of the damp patch with a pencil and date it, then photograph it every few days to see if it grows.");
+ d[2].forEach(x=>act.push(x));
+ act.push("Take clear photos or a short video and share them with Mili Waterproofing.");
+ return{guide:g,sev:sev,note:d[0],actions:act};
+}
+const SEV={emergency:"Urgent: act now",moderate:"Inspection advised soon",minor:"Routine inspection"};
+const badge=s=>'<span class="badge badge-'+s+'">'+SEV[s]+'</span>';
+const chip=n=>'<span class="icon-chip">'+svg(n)+'</span>';
+const guideCard=g=>'<a class="card" href="#/guides/'+g.slug+'"><div class="card-top">'+chip(g.icon)+badge(g.severity)+'</div><h3>'+g.title+'</h3><p>'+g.subtitle+'</p><span class="card-cta">View how it is repaired '+svg("right")+'</span></a>';
 
-const GUIDES = [
-  {
-    slug: "terrace-roof-waterproofing", order: 1, title: "Terrace & Roof Slab Waterproofing", icon: "rain",
-    subtitle: "Dripping slabs, efflorescence rings, terrace puddles, and parapet movement cracks",
-    severity: "moderate",
-    summary: "Ceiling dampness is rarely directly below the crack on the terrace. Water travels horizontally inside the slab through micro-pores. We treat the terrace surface, parapet joints, and rainwater spouts with elastomeric membranes and fiber mesh.",
-    symptoms: [
-      "Water drips or seeps from ceiling during or hours after rainfall",
-      "Yellow-brown water stain marks, bubbling ceiling paint, or white efflorescence powder",
-      "Bulging plaster or sagging false-ceiling boards loaded with water",
-      "Water ponding (standing water) on the terrace near parapet edges or blocked outlets",
-      "Continuous dampness dripping even in dry weather (indicates overhead tank or concealed slab pipeline leak)",
-    ],
-    causes: [
-      "Shrinkage cracks or hairline fissures in terrace concrete or screed bed",
-      "Failed joints between flat slab and vertical parapet wall (absence of 45-degree angle fillet coving)",
-      "Unsealed rainwater drain mouths letting water bypass the piping into the slab core",
-      "Degraded tile grout or porous brick bat coba allowing continuous water absorption",
-      "Concealed supply pipes running across the terrace slab suffering joint failure",
-    ],
-    safety: [
-      "IMMEDIATELY switch off the MCB breaker for ceiling lights, fans, and junction boxes in the affected room",
-      "Do NOT stand directly under bulging plaster or waterlogged false ceiling tiles",
-      "When inspecting the terrace during rains, beware of slippery algae around standing water",
-    ],
-    emergency: [
-      "Turn off the power circuit breaker for the affected room's ceiling",
-      "Place wide tubs or buckets with a cloth inside to catch drips without splashing",
-      "If false ceiling or paint is heavily bulging with water, make a tiny pinhole with a screwdriver over a bucket to release trapped pressure safely",
-      "If dripping occurs on a sunny dry day without rain, shut the Overhead Tank Outlet Valve immediately",
-    ],
-    steps: [
-      { title: "Surface Inspection & Pressure Cleaning", detail: "Thoroughly clean the terrace surface, removing moss, loose cement slurry, and debris. Check all rainwater spouts for blockages." },
-      { title: "V-Groove Crack Chasing", detail: "Chase visible shrinkage cracks into a 6mm x 6mm V-groove with an angle grinder. Clean out loose dust thoroughly." },
-      { title: "Flexible Polymer Crack Sealing", detail: "Fill the groove using an engineered high-elongation sealant. Avoid brittle white cement which cracks under temperature fluctuations." },
-      { title: "45-Degree Angle Fillet Coving", detail: "Construct a 2 to 3-inch angle fillet (coving) at 90-degree slab-to-parapet junctions using polymer-modified mortar to stop water pooling." },
-      { title: "Elastomeric Coating with Fiber Mesh", detail: "Apply two coats of UV-resistant elastomeric waterproofing coating, sandwiching an alkali-resistant glass fiber mesh over cracks and drain joints." },
-      { title: "24-Hour Ponding Test", detail: "Allow full 72-hour curing, then pond water for 24 hours to verify complete leak-proof performance." },
-    ],
-    call_pro: [
-      "The ceiling shows structural cracks with exposed, rusted reinforcing steel bars (spalling concrete)",
-      "Continuous seepage occurs without rain and water pressure drops across the building",
-      "The entire terrace has hollow china mosaic or debonded brick bat coba requiring total re-waterproofing",
-    ],
-  },
-  {
-    slug: "wall-dampness-treatment", order: 2, title: "Wall Dampness & Efflorescence Treatment", icon: "brick",
-    subtitle: "Blistering paint, efflorescence salt powder, rising damp, and skirting moisture",
-    severity: "moderate",
-    summary: "Wall dampness occurs via internal concealed pipe leaks, external rainwater absorption, or capillary rising damp. We identify the exact moisture path using electronic diagnostic sensors before applying damp-proof barriers.",
-    symptoms: [
-      "Paint bubbles, flakes off, or shows brownish watermarks",
-      "Chalky white powder (shora / efflorescence salt) pushing out of the wall plaster",
-      "Damp patch expanding behind bathrooms, kitchen counters, or near floor skirting",
-      "Musty damp smell and dark mold patches behind wardrobes, beds, and cabinets",
-    ],
-    causes: [
-      "Concealed CPVC/GI pipe pinhole or joint weeping inside the masonry",
-      "Missing or worn tile grout in adjacent shower walls allowing moisture wicking",
-      "External plaster cracks taking in driving rain",
-      "Capillary rising damp from ground level due to lack of a functional Damp Proof Course (DPC)",
-    ],
-    safety: [
-      "Cut off power to switchboards on damp walls — moisture creates micro-current leakages and shock hazards",
-      "Do NOT apply oil paint or putty over damp plaster — trapped water will rapidly deteriorate the brickwork",
-    ],
-    emergency: [
-      "Switch off MCB breakers for electrical boxes located directly on the moist wall",
-      "Shift wooden wardrobes, beds, and textiles at least 6 inches away from the wall to prevent mold damage",
-    ],
-    steps: [
-      { title: "Sub-Surface Moisture Mapping", detail: "Perform non-destructive electronic moisture mapping to trace the ingress boundary back to its origin without breaking sound plaster." },
-      { title: "Water Line Pressure Check", detail: "Shut all taps tightly and observe the water meter dial to verify whether concealed pressurized lines are leaking." },
-      { title: "Plaster Scraping to Masonry", detail: "Chisel away all blistered paint and degraded plaster 6 inches beyond the damp zone down to bare brick or concrete." },
-      { title: "Anti-Efflorescence Treatment", detail: "Scrub the exposed masonry and apply an anti-efflorescence chemical wash to neutralize salt crystals." },
-      { title: "Crystalline Damp-Barrier Slurry", detail: "Apply two coats of polymer/crystalline waterproofing slurry directly onto the masonry substrate." },
-      { title: "Waterproof Replastering", detail: "Replaster with sand-cement mortar mixed with an integral waterproofing compound." },
-    ],
-    call_pro: [
-      "Concealed pipeline joint needs precision non-destructive pin-pointing and repair",
-      "Widespread rising damp affecting entire ground floor plinth level",
-      "Severe internal mold infestation affecting indoor air quality",
-    ],
-  },
-  {
-    slug: "bathroom-leakage-repair", order: 3, title: "Bathroom & Balcony Leakage (Without Tile Breaking)", icon: "bath",
-    subtitle: "Seepage to ceiling below, sunken slab moisture, shower area tile joint leakage",
-    severity: "moderate",
-    summary: "Most bathroom seepage occurs through degraded tile grout and around drainage collar joints into the sunken slab. We provide permanent epoxy tile joint filling and structural injection grouting without breaking tiles.",
-    symptoms: [
-      "Dampness or paint peeling on the ceiling directly below the bathroom",
-      "Moisture patches along the bathroom outer skirting walls",
-      "Black hollow mold between bathroom floor tiles and shower corners",
-      "Water stains visible on external plumbing shafts",
-    ],
-    causes: [
-      "Washed-away cement grout allowing wastewater into the sunken slab",
-      "Unsealed gap between tile floor and the shower floor trap drain collar",
-      "Concealed pipe joint sweating inside the tiled wall",
-    ],
-    safety: [
-      "Turn off the power to exhaust fans and instant geysers if moisture is visible around wiring",
-    ],
-    emergency: [
-      "Halt floor washing and shower usage in the suspect bathroom to prevent worsening ceiling damage below",
-    ],
-    steps: [
-      { title: "Diagnostic Inspection", detail: "Map the damp spread on the ceiling below to confirm whether the leak is continuous (supply pipe) or drainage/grout related." },
-      { title: "Joint Raking & Cleaning", detail: "Deep-clean and rake out all existing weak cement grout from tile joints using a motorized joint-clearing blade." },
-      { title: "Waterproof Epoxy Grouting", detail: "Fill all floor and vertical wall joints with 100% solid, chemical-resistant waterproof epoxy tile joint filler." },
-      { title: "Drain Collar Seal", detail: "Seal the critical junction where floor tiles meet the PVC drain trap using flexible polyurethane sealant." },
-      { title: "Structural Injection Grouting (If Required)", detail: "For active seepage through concrete slabs, install injection packers and inject hydrophobic resin to stop water flow from within." },
-    ],
-    call_pro: [
-      "Continuous dripping occurring below the sunken slab 24/7",
-      "Internal wall concealed diverter or concealed flush tank leaking behind tiles",
-    ],
-  },
-  {
-    slug: "concealed-pipe-leakage", order: 4, title: "Concealed Pipe Non-Destructive Leak Detection", icon: "wrench",
-    subtitle: "Hidden line leaks, internal CPVC/GI joint failure, pressure drops, zero-demolition scanning",
-    severity: "emergency",
-    summary: "Concealed pipe leaks can degrade RCC beams and masonry columns silently. We use specialized non-destructive acoustic and diagnostic scanning to identify concealed moisture gradients behind walls and under marble floors without unnecessary demolition.",
-    symptoms: [
-      "Water meter spins continuously even when all faucets are shut tight",
-      "Sudden unexpected rise in water bills or rooftop tank draining rapidly",
-      "Hissing water pressure sound behind tiled walls",
-      "Localized warm or cold spot on wall or floor tiles",
-    ],
-    causes: [
-      "Failed solvent cement joint on concealed CPVC/PVC water lines",
-      "Corrosion pinhole in aging galvanized iron (GI) plumbing",
-      "Puncture in concealed pipe caused by drilling wall screws or nails",
-    ],
-    safety: [
-      "Shut the main water supply stopcock immediately upon confirming continuous hidden flow",
-      "Switch off MCB breakers for electrical lines in walls that show concealed moisture",
-    ],
-    emergency: [
-      "Immediately shut off the terrace overhead tank outlet valve or main building stopcock",
-      "Relieve pipe pressure by opening the lowest ground-floor outdoor tap",
-    ],
-    steps: [
-      { title: "Water Meter & Pressure Drop Test", detail: "Confirm internal pressurized leakage by isolating lines and recording water meter movement." },
-      { title: "Sub-Surface Diagnostic Scan", detail: "Scan the pipeline layout with electronic diagnostic sensors to pinpoint the exact failure coordinate." },
-      { title: "Precision Tile Opening", detail: "Carefully open only 1 or 2 specific tiles at the pinpointed leak point instead of breaking entire bathroom walls." },
-      { title: "Line Rectification", detail: "Cut out the cracked pipe fitting, install replacement CPVC/GI couplers with heavy-duty solvent/threading, and pressure test." },
-      { title: "Waterproof Re-sealing", detail: "Apply waterproofing barrier around the repaired pipe cavity before restoring tiles." },
-    ],
-    call_pro: [
-      "Main water riser pipe leaking inside structural building duct",
-      "Concealed pipe under expensive Italian marble or vitrified flooring",
-    ],
-  },
-  {
-    slug: "water-tank-waterproofing", order: 5, title: "Overhead & Underground Tank Waterproofing", icon: "layers",
-    subtitle: "Concrete tank cracks, basement/sump seepage, terrace staging dampness",
-    severity: "moderate",
-    summary: "Tank seepages damage terrace slabs and basement structures continuously. We provide food-grade certified waterproofing coatings and injection grouting for overhead and underground water reservoirs.",
-    symptoms: [
-      "Wet patch on terrace directly beneath the water tank staging or base slab",
-      "Rapid overnight drop in overhead tank water level with no usage",
-      "Groundwater infiltrating into underground sump tank or basement",
-    ],
-    causes: [
-      "Hydrostatic pressure cracking concrete or masonry tank walls",
-      "Failed waterproofing plaster on tank internal surfaces",
-      "Leaking bottom outlet pipe nipples and union connector gaskets",
-    ],
-    safety: [
-      "Ensure food-grade, potable-safe certified epoxies/sealants for internal drinking water tanks",
-      "Never enter underground tanks without adequate ventilation and a partner present",
-    ],
-    emergency: [
-      "Switch off water pump immediately and close the tank inlet line valve",
-      "If tank base slab is leaking heavily onto the terrace, drain water below the crack level",
-    ],
-    steps: [
-      { title: "Drain & High-Pressure Wash", detail: "Drain the tank completely and pressure-wash all internal walls, removing algae and loose mortar." },
-      { title: "Crack Treatment", detail: "Open internal construction joints and cracks into V-grooves and fill with high-strength crystalline repair mortar." },
-      { title: "Nipple & Union Fitting Seal", detail: "Re-gasket all inlet, outlet, and overflow pipe nipples with potable-water safe sealant." },
-      { title: "Food-Grade Crystalline/Polymer Coating", detail: "Apply two coats of certified non-toxic, potable-safe crystalline or 100% solid epoxy waterproofing membrane." },
-      { title: "Curing & Refilling", detail: "Allow full 72-hour curing and thorough water rinse before refilling for household consumption." },
-    ],
-    call_pro: [
-      "Large structural cracks on overhead RCC tank staging columns",
-      "Underground tank suffering from active external water pressure seepage",
-    ],
-  }
-];
+const app=document.getElementById("app");
+const W={answers:{}};
+const emergencyDone=new Set(),safetyDone=new Set();
+function toast(m){const t=document.getElementById("toast");t.textContent=m;t.hidden=false;clearTimeout(toast._t);toast._t=setTimeout(()=>{t.hidden=true},4000)}
+function setMeta(title){document.title=title+" | Mili Waterproofing Surat"}
 
-const EMERGENCY_STEPS = [
-  {
-    title: "Cut Off Electricity First",
-    detail: "If water is dripping near lights, fans, switchboards, or appliances, immediately turn off that room's circuit breaker (MCB). Never touch switches with wet hands."
-  },
-  {
-    title: "Identify Source: Rain vs Plumbing Line",
-    detail: "If the ceiling leaks during rain, the cause is terrace ponding or slab cracks. If water drips continuously 24/7 on a dry sunny day, immediately turn off the Overhead Tank Outlet Valve."
-  },
-  {
-    title: "Close Main Water Stopcock",
-    detail: "For active concealed pipe leaks, turn the terrace tank outlet valve or main building stopcock clockwise immediately."
-  },
-  {
-    title: "Relieve Trapped Line Pressure",
-    detail: "After shutting the main valve, open the lowest tap in the house (outdoor wash tap) so water drains out of pipes rather than pooling into walls."
-  },
-  {
-    title: "Relieve Bulging False Ceilings or Paint",
-    detail: "If water is trapped behind ceiling paint causing a heavy bulge, place a bucket underneath and carefully puncture a small pinhole with a screwdriver to release water safely."
-  },
-  {
-    title: "Clear Terrace Rainwater Outlets",
-    detail: "If roof seepage occurs during rain, check terrace drains immediately. Clear accumulated leaves and silt so water does not pond on the slab."
-  },
-  {
-    title: "Contact Mili Waterproofing in Surat",
-    detail: "Take clear photos or a short video clip of the leak path and call Mili Waterproofing at 9714343034 for immediate on-site inspection."
-  }
-];
-
-const QUESTIONS = [
-  {
-    key: "location",
-    question: "Where is the water seepage or moisture located?",
-    hint: "Select the primary area where moisture or water damage is visible in your property.",
-    options: [
-      { value: "terrace-roof-waterproofing", label: "Terrace / Roof Slab / Ceiling Seepage", icon: "rain" },
-      { value: "wall-dampness-treatment", label: "Wall Dampness / Peeling Paint / White Powder (Efflorescence)", icon: "brick" },
-      { value: "bathroom-leakage-repair", label: "Bathroom / Sunken Slab / Balcony Seepage", icon: "bath" },
-      { value: "concealed-pipe-leakage", label: "Concealed Pipe Leak / Hidden Wall Moisture", icon: "wrench" },
-      { value: "water-tank-waterproofing", label: "Overhead Water Tank / Basement Sump Seepage", icon: "layers" },
-    ]
-  },
-  {
-    key: "timing",
-    question: "When does the water appear or drip?",
-    hint: "This helps identify whether it is rain seepage or pressurized plumbing failure.",
-    options: [
-      { value: "rain_only", label: "Only during or right after rainfall (Monsoon Seepage)" },
-      { value: "continuous", label: "Continuous 24/7 non-stop drip (Concealed Pipe / Tank Leak)" },
-      { value: "usage_based", label: "Only when bathroom or washbasin is used upstairs (Tile Joint / Grout)" },
-    ]
-  },
-  {
-    key: "intensity",
-    question: "What is the severity of the water flow?",
-    hint: "Determines the urgency of on-site attention required.",
-    options: [
-      { value: "spray_gush", label: "Active continuous flow / heavy dripping" },
-      { value: "slow_drip", label: "Slow occasional drip or trickle" },
-      { value: "damp_only", label: "No active drip — wet damp patch, peeling paint or efflorescence powder" },
-    ]
-  }
-];
-
-function getDiagnosticAdvice(location, timing, intensity) {
-  const guide = GUIDES.find(g => g.slug === location) || GUIDES[0];
-  let severity = "moderate";
-  let actions = [];
-  let diagnosisNote = "";
-
-  if (location === "terrace-roof-waterproofing") {
-    if (timing === "rain_only") {
-      diagnosisNote = "This is Terrace/Roof Rainwater Seepage. Root causes are hairline slab cracks, parapet wall corner joint failure, or choked drain spouts.";
-      actions.push("Turn off electrical MCB breakers for ceiling fans and lights in this room immediately.");
-      actions.push("Clear terrace drain mouths to prevent standing water accumulation.");
-      actions.push("If ceiling plaster/paint is bulging with water, puncture a tiny hole to drain into a bucket.");
-      actions.push("Needs professional crack sealing with flexible PU sealant and elastomeric waterproof coating.");
-      severity = "moderate";
-    } else if (timing === "continuous") {
-      diagnosisNote = "Continuous ceiling dripping without rain indicates a LEAKING OVERHEAD TANK or a CONCEALED WATER PIPE running across the terrace slab.";
-      actions.push("Shut the main Overhead Tank Outlet Valve immediately.");
-      actions.push("Turn off ceiling electrical power to avoid electrical short-circuits.");
-      actions.push("Schedule pressure testing and line inspection with Mili Waterproofing.");
-      severity = "emergency";
-    } else {
-      diagnosisNote = "Seepage occurring during bathroom use upstairs indicates drainage trap leakage or failed tile grout in the floor above.";
-      actions.push("Request the resident above to temporarily halt floor washing.");
-      actions.push("Requires bathroom vertical joint inspection and waterproof epoxy grouting.");
-      severity = "minor";
-    }
-  } else if (location === "wall-dampness-treatment") {
-    if (timing === "continuous") {
-      diagnosisNote = "Continuous wall dampness indicates a concealed pressurized pipe joint leak inside the masonry.";
-      actions.push("Check your water meter to confirm hidden plumbing pipe leakage.");
-      actions.push("Shut off power to switchboards situated on this wall.");
-      actions.push("Book a non-destructive electronic diagnostic scan with Mili Waterproofing to pinpoint the exact leak coordinate without breaking tiles.");
-      severity = "emergency";
-    } else {
-      diagnosisNote = "Intermittent wall dampness stems from failed bathroom tile grout or exterior masonry cracks.";
-      actions.push("Keep wooden furniture away from damp walls to prevent fungal growth.");
-      actions.push("Inspect external wall cracks and bathroom vertical joints for treatment.");
-      severity = "moderate";
-    }
-  } else if (location === "concealed-pipe-leakage") {
-    diagnosisNote = "Concealed pipeline joint or pinhole leak detected inside the masonry.";
-    actions.push("Shut the main water supply valve immediately to stop internal wall water saturation.");
-    actions.push("Conduct a specialized Non-Destructive Electronic Scan to pinpoint the exact leak coordinate before breaking any tiles.");
-    severity = "emergency";
-  } else {
-    diagnosisNote = "Structural or joint moisture issue requiring waterproof coating or epoxy joint treatment.";
-    actions.push("Check surrounding drain traps and pipe unions for obvious weeping.");
-    actions.push("Schedule a comprehensive on-site waterproofing assessment.");
-    severity = "moderate";
-  }
-
-  return { guide, severity, actions, diagnosisNote };
+function renderHome(){
+ setMeta("Leak Assessment Tool for Surat Homes");
+ app.innerHTML='<section class="hero"><div class="container hero-inner"><span class="hero-badge">'+svg("shield")+' Mili Waterproofing · Surat</span><h1>Leak Assessment Tool for Surat Homes</h1><p>Find the likely source of terrace seepage, wall dampness, bathroom leakage, concealed pipe leaks or tank leaks, and get safe first steps. This is preliminary guidance; the real cause is confirmed at a site inspection.</p><div class="hero-actions"><a class="btn btn-whatsapp btn-lg btn-block-mob" href="'+wa("Hello Mili Waterproofing, I need a leakage inspection in Surat.")+'" target="_blank" rel="noopener">Book Inspection on WhatsApp</a><a class="btn btn-primary btn-lg btn-block-mob" href="#/wizard">Start Leak Assessment</a><a class="btn btn-danger btn-lg btn-block-mob" href="#/emergency">Active Leak? Safety Steps</a></div><div class="hero-meta"><span>'+svg("pin")+' Surat, Gujarat</span><span>'+svg("phone")+' 9714343034</span><span>'+svg("camera")+' Non-destructive leak tracing for hidden pipes</span></div></div></section>'+
+ '<section class="strip"><div class="container strip-inner"><p class="strip-msg">'+svg("alert")+' Water actively dripping? Make the power safe and stop the water source first.</p><div class="strip-actions"><a class="btn btn-danger btn-sm" href="#/emergency" style="flex:1">Emergency Checklist</a><a class="btn btn-outline btn-sm" href="tel:+919714343034" style="flex:1">Call 9714343034</a></div></div></section>'+
+ '<section class="section"><div class="container"><div class="section-head"><h2>Waterproofing and leak solutions in Surat</h2><p>How each type of problem is usually investigated and repaired.</p></div><div class="cards-grid">'+GUIDES.map(guideCard).join("")+'</div></div></section>';
+}
+function renderGuides(){
+ setMeta("Waterproofing Solutions in Surat");
+ app.innerHTML='<section class="section"><div class="container"><div class="section-head"><h1 style="font-size:clamp(22px,4vw,28px)">Waterproofing methods used in Surat</h1><p>Typical steps for each type of problem. The exact method is decided after inspecting your site.</p></div><div class="cards-grid">'+GUIDES.map(guideCard).join("")+'</div></div></section>';
+}
+function renderGuide(slug){
+ const g=GUIDES.find(x=>x.slug===slug);
+ if(!g){app.innerHTML='<div class="wizard-wrap"><h1>Page not found</h1><a class="btn btn-primary" href="#/guides" style="margin-top:20px">See all solutions</a></div>';return}
+ setMeta(g.title);
+ const safety=g.safety.map((s,i)=>{const k=g.slug+":"+i;return'<div class="check-row"><input type="checkbox" id="s'+i+'" data-safety="'+k+'"'+(safetyDone.has(k)?" checked":"")+'><label for="s'+i+'">'+s+'</label></div>'}).join("");
+ app.innerHTML='<div class="detail"><div class="container"><a class="back-link" href="#/guides">'+svg("left")+' Back to all solutions</a>'+
+ '<div class="detail-head"><div class="detail-title">'+chip(g.icon)+'<div><h1>'+g.title+'</h1><p style="color:var(--muted);font-size:13px;margin-top:2px">'+g.subtitle+'</p></div></div>'+badge(g.severity)+'</div>'+
+ '<p class="detail-summary">'+g.summary+'</p><div class="detail-grid"><div>'+
+ '<div class="detail-section"><h2>Symptoms</h2><ul class="tick-list">'+g.symptoms.map(s=>'<li>'+svg("check")+'<span>'+s+'</span></li>').join("")+'</ul></div>'+
+ '<div class="detail-section"><h2>Common causes</h2><ul class="dot-list">'+g.causes.map(c=>'<li>'+c+'</li>').join("")+'</ul></div>'+
+ '<div class="detail-section"><h2>Typical repair steps</h2><ol class="steps">'+g.steps.map((s,i)=>'<li><span class="step-num">'+(i+1)+'</span><div><h3>'+s.t+'</h3><p>'+s.d+'</p></div></li>').join("")+'</ol><p class="disclaimer">Actual method, materials, cost and warranty depend on what is found at the site inspection.</p></div></div>'+
+ '<div class="side"><div class="panel panel-contact"><h3>'+svg("phone")+' Need help in Surat?</h3><p style="font-size:13px;color:var(--muted);margin-top:6px">Mili Waterproofing can inspect the site and advise on the repair.</p><div style="display:flex;flex-direction:column;gap:8px;margin-top:12px"><a class="btn btn-whatsapp btn-sm" href="'+wa("Hello Mili Waterproofing, I need help with "+g.title+" in Surat.")+'" target="_blank" rel="noopener">Book Inspection on WhatsApp</a><a class="btn btn-primary btn-sm" href="tel:+919714343034">Call 9714343034</a></div></div>'+
+ '<div class="panel panel-danger"><h3>'+svg("alert")+' Immediate actions</h3><ul>'+g.emergency.map(e=>'<li>'+e+'</li>').join("")+'</ul><a class="btn btn-danger btn-sm" style="margin-top:12px;width:100%" href="#/emergency">Full emergency checklist</a></div>'+
+ '<div class="panel"><h3>Safety before inspection</h3>'+safety+'</div>'+
+ '<div class="panel"><h3>'+svg("shield")+' Call a professional if:</h3><ul>'+g.call_pro.map(c=>'<li>'+svg("check")+'<span>'+c+'</span></li>').join("")+'</ul></div></div></div></div></div>';
+ app.querySelectorAll("[data-safety]").forEach(b=>b.addEventListener("change",()=>{b.checked?safetyDone.add(b.dataset.safety):safetyDone.delete(b.dataset.safety)}));
 }
 
-const wizardState = { step: 0, answers: {}, result: null };
-const emergencyDone = new Set();
-const safetyDone = new Map();
-const app = document.getElementById("app");
-
-function toast(msg) {
-  const t = document.getElementById("toast");
-  t.textContent = msg;
-  t.hidden = false;
-  clearTimeout(toast._t);
-  toast._t = setTimeout(() => { t.hidden = true; }, 4000);
+function questionFor(step){
+ if(step===0)return Q_LOC;
+ if(step===1)return Object.assign({},Q_TIME,{opts:TIMING[W.answers.location]});
+ return Q_INT;
 }
-
-function chip(iconName) {
-  return '<span class="icon-chip">' + svg(iconName) + '</span>';
+function renderWizard(step){
+ setMeta("Leak Assessment");
+ const q=questionFor(step);
+ const opts=q.opts.map(o=>'<button type="button" class="option" data-v="'+o[0]+'">'+(o[2]?svg(o[2]):"")+'<span>'+o[1]+'</span><span class="arrow">'+svg("right")+'</span></button>').join("");
+ app.innerHTML='<div class="wizard-wrap"><h1>Leak Assessment</h1><p style="font-size:14px;color:var(--muted);margin-top:4px">Answer three quick questions for a likely source and safe first steps. This is preliminary guidance, not a diagnosis.</p>'+
+ '<div class="progress-dots" aria-hidden="true">'+[0,1,2].map(i=>'<span class="'+(i<step?"done":i===step?"current":"")+'"></span>').join("")+'</div>'+
+ '<div class="step-card"><p style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--faint)">Step '+(step+1)+' of 3</p><h2 tabindex="-1" id="q" style="font-size:19px;margin-top:4px">'+q.q+'</h2><p style="color:var(--faint);font-size:13px;margin-top:4px">'+q.h+'</p><div class="options">'+opts+'</div>'+
+ (step>0?'<button type="button" class="wizard-back" id="wb">'+svg("left")+' Back</button>':"")+'</div></div>';
+ app.querySelectorAll("[data-v]").forEach(b=>b.addEventListener("click",()=>{
+  W.answers[q.key]=b.dataset.v;
+  if(step===0)delete W.answers.timing;
+  location.hash=step<2?"#/wizard/"+(step+2):"#/wizard/result";
+ }));
+ const wb=document.getElementById("wb");if(wb)wb.addEventListener("click",()=>history.back());
 }
-function badge(severity) {
-  const labels = { emergency: "Urgent Action Required", moderate: "Action Recommended (24-48h)", minor: "Standard Inspection" };
-  return '<span class="badge badge-' + severity + '">' + (labels[severity] || severity) + '</span>';
+function renderResult(){
+ const a=W.answers;
+ if(!a.location||!a.timing||!a.intensity){location.replace("#/wizard");return}
+ setMeta("Leak Assessment Result");
+ const r=advice(a);
+ const tLabel=(TIMING[a.location].find(t=>t[0]===a.timing)||[])[1]||"";
+ const msg="Hello Mili Waterproofing, I used your leak tool. Area: "+r.guide.title+". When: "+tLabel+". Water: "+INT_LABEL[a.intensity]+". I need a site inspection in Surat.";
+ app.innerHTML='<div class="wizard-wrap"><h1 tabindex="-1" id="q">Your Result</h1><div class="result-card" aria-live="polite">'+
+ '<div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap"><span style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--faint)">Preliminary assessment</span>'+badge(r.sev)+'</div>'+
+ '<div style="display:flex;gap:14px;margin-top:14px;align-items:flex-start">'+chip(r.guide.icon)+'<div><h2 style="font-size:19px">'+r.guide.title+'</h2><p style="font-size:13px;color:var(--muted);margin-top:4px;line-height:1.5">'+r.note+'</p></div></div>'+
+ '<div class="actions-box"><h3>What to do now</h3><ul>'+r.actions.map(x=>'<li>'+svg("shield")+'<span>'+x+'</span></li>').join("")+'</ul></div>'+
+ '<div style="margin-top:18px;padding:16px;background:var(--teal-soft);border:1px solid var(--teal-border);border-radius:10px"><h3 style="font-size:14px;color:var(--teal-text)">Get it inspected in Surat</h3><p style="font-size:13px;color:#334155;margin-top:4px">Send this summary to Mili Waterproofing to arrange a site inspection.</p><div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap"><a class="btn btn-whatsapp btn-sm" href="'+wa(msg)+'" target="_blank" rel="noopener">Send on WhatsApp</a><a class="btn btn-primary btn-sm" href="tel:+919714343034">Call 9714343034</a></div></div>'+
+ '<p class="disclaimer">This result is general guidance based on your answers and is not a diagnosis. The actual cause and repair are confirmed only after a site inspection.</p>'+
+ '<div style="display:flex;gap:10px;margin-top:18px;flex-direction:column"><a class="btn btn-outline" href="#/guides/'+r.guide.slug+'">See how this is usually repaired</a><button type="button" class="btn btn-outline" id="wr">'+svg("restart")+' Start over</button></div></div></div>';
+ document.getElementById("wr").addEventListener("click",()=>{W.answers={};location.hash="#/wizard"});
 }
-function guideCard(g) {
-  return (
-    '<a class="card" href="#/guides/' + g.slug + '">' +
-      '<div class="card-top">' + chip(g.icon) + badge(g.severity) + '</div>' +
-      '<h3>' + g.title + '</h3>' +
-      '<p>' + g.subtitle + '</p>' +
-      '<span class="card-cta">View Rectification Methodology ' + svg('arrowRight') + '</span>' +
-    '</a>'
-  );
+function renderEmergency(){
+ setMeta("Emergency Leak Steps");
+ const total=EMERGENCY_STEPS.length;
+ const items=EMERGENCY_STEPS.map((s,i)=>{const d=emergencyDone.has(i);return'<li class="em-item'+(d?" done":"")+'" id="emi'+i+'"><input type="checkbox" id="em'+i+'" data-em="'+i+'"'+(d?" checked":"")+'><div><label for="em'+i+'" style="cursor:pointer"><h3 style="font-size:15px">'+(i+1)+'. '+s.t+'</h3></label><p style="color:var(--muted);font-size:13px;margin-top:3px">'+s.d+'</p></div></li>'}).join("");
+ app.innerHTML='<section class="em-hero"><div class="container em-hero-inner"><span class="badge badge-emergency">'+svg("alert")+' Emergency water leak first aid</span><h1>Limit the damage first</h1><p style="font-size:14px;margin-top:6px">Follow these steps in order. They reduce damage until the cause is inspected. If anyone is at risk of electric shock or the ceiling may collapse, keep away and call for help.</p></div></section>'+
+ '<div class="container em-grid"><div><div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><h2>Checklist</h2><span id="emc" class="badge badge-emergency"></span></div><div class="progress-track"><div id="emf" class="progress-fill"></div></div><ul class="em-list">'+items+'</ul></div>'+
+ '<div class="side"><div class="panel panel-contact"><h3>'+svg("phone")+' Help in Surat</h3><p style="font-size:13px;color:var(--muted);margin-top:4px">Leak too big to manage?</p><div style="display:flex;flex-direction:column;gap:8px;margin-top:12px"><a class="btn btn-whatsapp btn-sm" href="'+wa("Urgent water leakage in Surat. Please assist.")+'" target="_blank" rel="noopener">Urgent WhatsApp</a><a class="btn btn-primary btn-sm" href="tel:+919714343034">Call 9714343034</a></div><p class="disclaimer">For electrical danger or fire, call the emergency services (112) first.</p></div>'+
+ '<div class="panel panel-danger"><h3>'+svg("alert")+' Electricity first</h3><p style="font-size:13px;margin-top:4px">Do not touch switches or appliances with wet hands or while standing in water. Switch off at the MCB only if you can do so safely.</p></div></div></div>';
+ const upd=()=>{document.getElementById("emf").style.width=(emergencyDone.size/total*100)+"%";document.getElementById("emc").textContent=emergencyDone.size+" of "+total+" completed"};
+ upd();
+ app.querySelectorAll("[data-em]").forEach(b=>b.addEventListener("change",()=>{
+  const i=+b.dataset.em;b.checked?emergencyDone.add(i):emergencyDone.delete(i);
+  document.getElementById("emi"+i).classList.toggle("done",b.checked);upd();
+  if(emergencyDone.size===total)toast("All steps marked complete.");
+ }));
 }
-
-function renderHome() {
-  app.innerHTML =
-    '<section class="hero"><div class="container hero-inner">' +
-      '<span class="hero-badge">' + svg('shield') + ' Mili Waterproofing · Surat</span>' +
-      '<h1>Smart Leak Assessment & Diagnostic Tool Surat</h1>' +
-      '<p>Eliminate terrace seepage, concealed pipe leaks, and bathroom dampness across Surat. We combine proven waterproofing engineering with advanced Non-Destructive Electronic Leak Diagnostics.</p>' +
-      '<div class="hero-actions">' +
-        '<a class="btn btn-whatsapp btn-lg btn-block-mob" href="https://wa.me/919714343034?text=Hello%20Mili%20Waterproofing%2C%20I%20need%20a%20leakage%20inspection%20in%20Surat." target="_blank">Book Inspection on WhatsApp</a>' +
-        '<a class="btn btn-primary btn-lg btn-block-mob" href="#/wizard">Smart Leak Diagnostic Tool</a>' +
-        '<a class="btn btn-danger btn-lg btn-block-mob" href="#/emergency">Active Leak? Safety Steps</a>' +
-      '</div>' +
-      '<div class="hero-meta">' +
-        '<span>' + svg('pin') + ' Surat, Gujarat</span>' +
-        '<span>' + svg('phone') + ' 9714343034</span>' +
-        '<span>' + svg('camera') + ' Non-Destructive Leak Diagnostics</span>' +
-      '</div>' +
-    '</div></section>' +
-    '<section class="strip"><div class="container strip-inner">' +
-      '<p class="strip-msg">' + svg('alert') + ' Water actively dripping? Cut power and stop the water source first.</p>' +
-      '<div class="strip-actions">' +
-        '<a class="btn btn-danger btn-sm" href="#/emergency" style="flex:1">Emergency Checklist</a>' +
-        '<a class="btn btn-outline btn-sm" href="tel:9714343034" style="flex:1">Call 9714343034</a>' +
-      '</div>' +
-    '</div></section>' +
-    '<section class="section"><div class="container">' +
-      '<div class="section-head"><h2>Specialized Waterproofing Solutions</h2><p>Engineering methodologies for terraces, walls, bathrooms, and concealed piping across Surat.</p></div>' +
-      '<div class="cards-grid">' + GUIDES.map(guideCard).join('') + '</div>' +
-    '</div></section>';
+function route(){
+ const p=(location.hash||"#/").replace(/^#\//,"").split("/").filter(Boolean);
+ if(p[0]==="guides"&&p[1])renderGuide(p[1]);
+ else if(p[0]==="guides")renderGuides();
+ else if(p[0]==="wizard"){
+  if(p[1]==="result")renderResult();
+  else{
+   const s=p[1]?Math.min(2,Math.max(0,(+p[1]||1)-1)):0;
+   if(s===0&&!p[1])W.answers={};
+   if((s>=1&&!W.answers.location)||(s>=2&&!W.answers.timing)){location.replace("#/wizard");return}
+   renderWizard(s);
+  }}
+ else if(p[0]==="emergency")renderEmergency();
+ else renderHome();
 }
-
-function renderGuides() {
-  app.innerHTML =
-    '<section class="section"><div class="container">' +
-      '<div class="section-head"><h2>Structural Waterproofing Methodologies</h2><p>Standard engineering methodologies followed by Mili Waterproofing Surat for 100% leak-proof results.</p></div>' +
-      '<div class="cards-grid">' + GUIDES.map(guideCard).join('') + '</div>' +
-    '</div></section>';
-}
-
-function renderGuideDetail(slug) {
-  const g = GUIDES.find(x => x.slug === slug);
-  if (!g) {
-    app.innerHTML = '<div class="wizard-wrap"><h2>Guide not found</h2><a class="btn btn-primary" href="#/guides" style="margin-top:20px;">All Guides</a></div>';
-    return;
-  }
-  const safety = g.safety.map((item, i) => {
-    const id = "safe-" + g.slug + "-" + i;
-    const checked = safetyDone.get(g.slug + ":" + i) ? " checked" : "";
-    return '<div class="check-row"><input type="checkbox" id="' + id + '" data-safety="' + g.slug + ":" + i + '"' + checked + '><label for="' + id + '">' + item + '</label></div>';
-  }).join('');
-
-  app.innerHTML =
-    '<div class="detail"><div class="container">' +
-      '<a class="back-link" href="#/guides">' + svg('arrowLeft') + ' Back to all services</a>' +
-      '<div class="detail-head"><div class="detail-title">' + chip(g.icon) +
-        '<div><h1>' + g.title + '</h1><p style="color:var(--muted);font-size:13px;margin-top:2px;">' + g.subtitle + '</p></div></div>' + badge(g.severity) + '</div>' +
-      '<p class="detail-summary">' + g.summary + '</p>' +
-      '<div class="detail-grid"><div>' +
-        '<div class="detail-section"><h2>Symptoms & Detection</h2><ul class="tick-list">' +
-          g.symptoms.map(s => '<li>' + svg('checkCircle') + '<span>' + s + '</span></li>').join('') +
-        '</ul></div>' +
-        '<div class="detail-section"><h2>Root Causes</h2><ul class="dot-list">' +
-          g.causes.map(c => '<li>' + c + '</li>').join('') +
-        '</ul></div>' +
-        '<div class="detail-section"><h2>Standard Rectification Procedure</h2>' +
-          '<ol class="steps" style="margin-top:18px;">' +
-            g.steps.map((s, i) =>
-              '<li><span class="step-num">' + (i + 1) + '</span><div><h3>' + s.title + '</h3><p>' + s.detail + '</p></div></li>'
-            ).join('') +
-          '</ol></div>' +
-      '</div>' +
-      '<div class="side">' +
-        '<div class="panel panel-contact"><h3>' + svg('phone') + ' Need Expert Help in Surat?</h3><p style="font-size:13px;color:var(--muted);margin-top:6px;">Mili Waterproofing provides professional site inspection and non-destructive diagnostic scans.</p>' +
-          '<div style="display:flex;flex-direction:column;gap:8px;margin-top:12px;">' +
-            '<a class="btn btn-whatsapp btn-sm" href="https://wa.me/919714343034?text=Hello%20Mili%20Waterproofing%2C%20I%20need%20help%20with%20' + encodeURIComponent(g.title) + '%20in%20Surat." target="_blank">Book Inspection on WhatsApp</a>' +
-            '<a class="btn btn-primary btn-sm" href="tel:9714343034">Call 9714343034</a>' +
-          '</div>' +
-        '</div>' +
-        '<div class="panel panel-danger"><h3>' + svg('alert') + ' Immediate Action</h3><ul style="list-style:none;margin-top:8px;display:flex;flex-direction:column;gap:6px;">' +
-          g.emergency.map(e => '<li style="font-size:13px;">' + e + '</li>').join('') +
-        '</ul><a class="btn btn-danger btn-sm" style="margin-top:12px;width:100%" href="#/emergency">View Emergency Protocol</a></div>' +
-        '<div class="panel"><h3>Pre-Inspection Safety</h3>' + safety + '</div>' +
-        '<div class="panel"><h3>' + svg('shield') + ' Call Mili Waterproofing If:</h3><ul style="list-style:none;margin-top:8px;display:flex;flex-direction:column;gap:6px;">' +
-          g.call_pro.map(c => '<li style="display:flex;gap:6px;font-size:13px;">' + svg('checkCircle') + '<span>' + c + '</span></li>').join('') +
-        '</ul></div>' +
-      '</div></div>' +
-    '</div></div>';
-
-  app.querySelectorAll("[data-safety]").forEach(box => {
-    box.addEventListener("change", () => {
-      if (box.checked) safetyDone.set(box.dataset.safety, true);
-      else safetyDone.delete(box.dataset.safety);
-    });
-  });
-}
-
-function renderWizard() {
-  const s = wizardState;
-  if (s.result) return renderWizardResult();
-
-  const q = QUESTIONS[s.step];
-  const options = q.options.map(o => {
-    const iconHtml = o.icon ? svg(o.icon) : "";
-    return (
-      '<button type="button" class="option" data-option="' + o.value + '">' + iconHtml +
-      '<span>' + o.label + '</span><span class="arrow">' + svg('arrowRight') + '</span></button>'
-    );
-  }).join('');
-  const back = s.step > 0 ? '<button type="button" class="wizard-back" id="wizard-back">' + svg('arrowLeft') + ' Back</button>' : '';
-
-  app.innerHTML =
-    '<div class="wizard-wrap">' +
-      '<h1 style="font-size:26px;font-weight:800;">Smart Leak Assessment Tool</h1><p style="font-size:14px;color:var(--muted);margin-top:4px;">Answer three simple questions to identify the likely source and safety actions for your leak.</p>' +
-      '<div class="progress-dots">' + QUESTIONS.map((_, i) =>
-        '<span class="' + (i < s.step ? "done" : i === s.step ? "current" : "") + '"></span>'
-      ).join('') + '</div>' +
-      '<div class="step-card">' +
-        '<p style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);">Step ' + (s.step + 1) + ' of ' + QUESTIONS.length + '</p>' +
-        '<h2 style="font-size:19px;margin-top:4px;">' + q.question + '</h2>' +
-        '<p style="color:var(--faint);font-size:13px;margin-top:4px;">' + q.hint + '</p>' +
-        '<div class="options">' + options + '</div>' + back +
-      '</div>' +
-    '</div>';
-
-  app.querySelectorAll("[data-option]").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const key = QUESTIONS[s.step].key;
-      s.answers[key] = btn.dataset.option;
-      if (s.step < QUESTIONS.length - 1) {
-        s.step++;
-        renderWizard();
-      } else {
-        s.result = getDiagnosticAdvice(s.answers.location, s.answers.timing, s.answers.intensity);
-        renderWizard();
-      }
-    });
-  });
-  const backBtn = document.getElementById("wizard-back");
-  if (backBtn) backBtn.addEventListener("click", () => { s.step--; renderWizard(); });
-}
-
-function renderWizardResult() {
-  const s = wizardState;
-  const r = s.result;
-  const waText = encodeURIComponent("Hello Mili Waterproofing, my leak assessment shows: " + r.guide.title + " (" + r.diagnosisNote + "). I would like to book a site inspection in Surat.");
-
-  app.innerHTML =
-    '<div class="wizard-wrap">' +
-      '<h1 style="font-size:26px;font-weight:800;">Assessment Result</h1>' +
-      '<div class="result-card">' +
-        '<div style="display:flex;justify-content:space-between;align-items:center;">' +
-          '<span style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);">Diagnostic Evaluation</span>' + badge(r.severity) +
-        '</div>' +
-        '<div style="display:flex;gap:14px;margin-top:14px;align-items:flex-start;">' + chip(r.guide.icon) +
-          '<div><h2 style="font-size:19px;font-weight:700;">' + r.guide.title + '</h2>' +
-          '<p style="font-size:13px;color:var(--muted);margin-top:4px;line-height:1.5;">' + r.diagnosisNote + '</p></div>' +
-        '</div>' +
-        '<div class="actions-box"><h3>Immediate Priority Safety Steps</h3><ul>' +
-          r.actions.map(a => '<li>' + svg('shield') + '<span>' + a + '</span></li>').join('') +
-        '</ul></div>' +
-        '<div style="margin-top:18px;padding:16px;background:#F0FDFA;border:1px solid #99F6E4;border-radius:10px;">' +
-          '<h3 style="font-size:14px;color:#0F766E;font-weight:700;">Get Professional Resolution in Surat</h3>' +
-          '<p style="font-size:13px;color:#334155;margin-top:4px;">Share this preliminary diagnosis directly with Mili Waterproofing for non-destructive electronic inspection and guaranteed repair.</p>' +
-          '<div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;">' +
-            '<a class="btn btn-whatsapp btn-sm" href="https://wa.me/919714343034?text=' + waText + '" target="_blank">Send to WhatsApp (9714343034)</a>' +
-            '<a class="btn btn-primary btn-sm" href="tel:9714343034">Call Specialist</a>' +
-          '</div>' +
-        '</div>' +
-        '<p style="font-size:11px;color:var(--faint);margin-top:12px;line-height:1.4;">*Note: This digital assessment provides preliminary guidance based on typical structural symptoms. Actual site conditions will be verified during professional site inspection.</p>' +
-        '<div style="display:flex;gap:10px;margin-top:18px;flex-direction:column;">' +
-          '<a class="btn btn-outline" href="#/guides/' + r.guide.slug + '">View Rectification Methodology</a>' +
-          '<button type="button" class="btn btn-outline" id="wizard-restart">' + svg('restart') + ' Start Over</button>' +
-        '</div>' +
-      '</div>' +
-    '</div>';
-
-  document.getElementById("wizard-restart").addEventListener("click", () => {
-    wizardState.step = 0;
-    wizardState.answers = {};
-    wizardState.result = null;
-    renderWizard();
-  });
-}
-
-function renderEmergency() {
-  const total = EMERGENCY_STEPS.length;
-  const items = EMERGENCY_STEPS.map((step, i) => {
-    const done = emergencyDone.has(i);
-    const id = "em-" + i;
-    return (
-      '<li class="em-item' + (done ? " done" : "") + '">' +
-        '<input type="checkbox" id="' + id + '" data-em="' + i + '"' + (done ? " checked" : "") + ' style="width:16px;height:16px;margin-top:3px;cursor:pointer;">' +
-        '<div><h3 style="font-size:15px;font-weight:700;">' + (i + 1) + '. ' + step.title + '</h3><p style="color:var(--muted);font-size:13px;margin-top:3px;">' + step.detail + '</p></div>' +
-      '</li>'
-    );
-  }).join('');
-
-  app.innerHTML =
-    '<section class="em-hero"><div class="container em-hero-inner">' +
-      '<span class="badge badge-emergency">' + svg('alert') + ' Emergency Water Leak First-Aid</span>' +
-      '<h1>Stop Immediate Water Damage</h1>' +
-      '<p style="font-size:14px;margin-top:6px;">Follow these safety steps in sequence to manage active water flow before on-site structural repair.</p>' +
-    '</div></section>' +
-    '<div class="container em-grid"><div>' +
-      '<div style="display:flex;justify-content:space-between;align-items:center;"><h2>Checklist</h2><span id="em-count" class="badge badge-emergency">0 of ' + total + ' completed</span></div>' +
-      '<div class="progress-track"><div id="em-fill" class="progress-fill"></div></div>' +
-      '<ul class="em-list">' + items + '</ul>' +
-    '</div>' +
-    '<div class="side">' +
-      '<div class="panel panel-contact"><h3>' + svg('phone') + ' Immediate Assistance in Surat</h3><p style="font-size:13px;color:var(--muted);margin-top:4px;">Facing an unmanageable water leakage emergency?</p>' +
-        '<div style="display:flex;flex-direction:column;gap:8px;margin-top:12px;">' +
-          '<a class="btn btn-whatsapp btn-sm" href="https://wa.me/919714343034?text=Urgent%20Water%20Leakage%20Emergency%20in%20Surat.%20Please%20assist%20immediately." target="_blank">Urgent WhatsApp (9714343034)</a>' +
-          '<a class="btn btn-primary btn-sm" href="tel:9714343034">Call 9714343034 Now</a>' +
-        '</div>' +
-      '</div>' +
-      '<div class="panel panel-danger"><h3>' + svg('alert') + ' Critical: Electricity First</h3><p style="font-size:13px;margin-top:4px;">Never touch switches or electrical appliances when water is dripping from ceilings or wet walls. Flip the circuit MCB off immediately.</p></div>' +
-    '</div></div>';
-
-  app.querySelectorAll("[data-em]").forEach(box => {
-    box.addEventListener("change", () => {
-      const i = Number(box.dataset.em);
-      if (box.checked) emergencyDone.add(i);
-      else emergencyDone.delete(i);
-      const fill = document.getElementById("em-fill");
-      const label = document.getElementById("em-count");
-      if (fill) fill.style.width = (emergencyDone.size / total) * 100 + "%";
-      if (label) label.textContent = emergencyDone.size + " of " + total + " completed";
-      if (emergencyDone.size === total) toast("All emergency first-aid measures executed.");
-    });
-  });
-}
-
-function route() {
-  const hash = location.hash || "#/";
-  const parts = hash.replace(/^#\//, "").split("/").filter(Boolean);
-  if (parts[0] === "guides" && parts[1]) renderGuideDetail(parts[1]);
-  else if (parts[0] === "guides") renderGuides();
-  else if (parts[0] === "wizard") renderWizard();
-  else if (parts[0] === "emergency") renderEmergency();
-  else renderHome();
-}
-
-window.addEventListener("hashchange", () => { route(); window.scrollTo(0, 0); });
-document.querySelectorAll(".brand-mark").forEach(el => el.innerHTML = svg("droplet"));
+window.addEventListener("hashchange",()=>{route();window.scrollTo(0,0);const f=document.getElementById("q")||app;f.focus({preventScroll:true})});
+document.querySelectorAll(".brand-mark").forEach(e=>e.innerHTML=svg("droplet"));
 route();
-  </script>
+</script>
 </body>
 </html>
