@@ -3,7 +3,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://miliwaterproofing.in/</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -48,11 +48,19 @@
     <priority>0.9</priority>
   </url>
 
-<!-- leak detection surat -->
-<url>
-  <loc>https://miliwaterproofing.in/leak-detection-surat</loc>
-  <lastmod>2026-11-11</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.9</priority>
-</url>
+  <!-- Leak Detection Surat -->
+  <url>
+    <loc>https://miliwaterproofing.in/leak-detection-surat</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- PU Injection Grouting -->
+  <url>
+    <loc>https://miliwaterproofing.in/pu-injection-grouting</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>
