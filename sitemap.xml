@@ -63,4 +63,20 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+
+  <!-- Terrace Waterproofing Varachha -->
+  <url>
+    <loc>https://miliwaterproofing.in/terrace-waterproofing-varachha</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+<!-- Terrace Waterproofing Adajan -->
+<url>
+  <loc>https://miliwaterproofing.in/terrace-waterproofing-adajan</loc>
+  <lastmod>2026-11-18</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
 </urlset>
