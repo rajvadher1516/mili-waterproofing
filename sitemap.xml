@@ -5,7 +5,13 @@
     <loc>https://miliwaterproofing.in/</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+  </url>
+
+  <!-- Gujarati Landing Page -->
+  <url>
+    <loc>https://miliwaterproofing.in/gujarati</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
   </url>
 
   <!-- Smart Leak Assessment Tool -->
@@ -13,7 +19,6 @@
     <loc>https://miliwaterproofing.in/leak-tool/</loc>
     <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 
   <!-- About Us -->
@@ -21,7 +26,6 @@
     <loc>https://miliwaterproofing.in/about</loc>
     <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 
   <!-- Terrace Waterproofing -->
@@ -29,7 +33,6 @@
     <loc>https://miliwaterproofing.in/terrace-waterproofing</loc>
     <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
   </url>
 
   <!-- Basement Waterproofing -->
@@ -37,7 +40,6 @@
     <loc>https://miliwaterproofing.in/basement-waterproofing</loc>
     <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
   </url>
 
   <!-- Water Tank Waterproofing -->
@@ -45,7 +47,6 @@
     <loc>https://miliwaterproofing.in/watertank-waterproofing</loc>
     <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
   </url>
 
   <!-- Leak Detection Surat -->
@@ -53,7 +54,6 @@
     <loc>https://miliwaterproofing.in/leak-detection-surat</loc>
     <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
   </url>
 
   <!-- PU Injection Grouting -->
@@ -61,7 +61,6 @@
     <loc>https://miliwaterproofing.in/pu-injection-grouting</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
   </url>
 
   <!-- Terrace Waterproofing Varachha -->
@@ -69,14 +68,12 @@
     <loc>https://miliwaterproofing.in/terrace-waterproofing-varachha</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
   </url>
 
-<!-- Terrace Waterproofing Adajan -->
-<url>
-  <loc>https://miliwaterproofing.in/terrace-waterproofing-adajan</loc>
-  <lastmod>2026-11-18</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.85</priority>
-</url>
+  <!-- Terrace Waterproofing Adajan -->
+  <url>
+    <loc>https://miliwaterproofing.in/terrace-waterproofing-adajan</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>
