@@ -28,6 +28,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <script type="application/ld+json">
 {
@@ -57,7 +58,7 @@
 </script>
 
 <style>
-  div[data-netlify-badge],.netlify-badge,iframe[title*="Netlify"],#netlify-badge{display:none!important;visibility:hidden!important;opacity:0!important;pointer-events:none!important}
+div[data-netlify-badge],.netlify-badge,iframe[title*="Netlify"],#netlify-badge{display:none!important;visibility:hidden!important;opacity:0!important;pointer-events:none!important}
 :root{--primary:#0b2545;--primary-dark:#06172c;--accent:#0077b6;--accent-hover:#005f94;--accent-light:#00b4d8;--text-dark:#0f172a;--text-muted:#475569;--bg-light:#f8fafc;--white:#fff;--card-border:#e2e8f0;--shadow:0 4px 20px -2px rgba(11,37,69,.06);--radius:10px;--green:#15803d;--green-bg:#f0fdf4;--green-border:#bbf7d0}
 *{margin:0;padding:0;box-sizing:border-box;font-family:"Noto Sans Gujarati",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
 html{scroll-behavior:smooth;scroll-padding-top:80px}
@@ -65,14 +66,15 @@ body{color:var(--text-dark);background:var(--bg-light);line-height:1.7;-webkit-f
 .top-bar{background:var(--primary-dark);color:#cbd5e1;font-size:.85rem;padding:8px 20px;display:flex;justify-content:space-between;align-items:center}
 .top-bar a{color:var(--accent-light);text-decoration:none;margin-left:12px}
 header{background:var(--white);position:sticky;top:0;z-index:1000;border-bottom:1px solid var(--card-border)}
-.nav-container{max-width:1200px;margin:0 auto;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px}
-.logo{font-size:1.35rem;font-weight:800;color:var(--primary);text-decoration:none;letter-spacing:-.4px;display:inline-flex;align-items:center}
+.nav-container{max-width:1200px;margin:0 auto;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.logo{font-size:1.35rem;font-weight:800;color:var(--primary);text-decoration:none;letter-spacing:-.4px;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
 .logo span{color:var(--accent)}
-.logo-tm{font-size:.65rem;font-weight:700;color:var(--accent);vertical-align:super;margin-left:3px}
+.logo-tm{font-size:.65rem;font-weight:700;color:var(--accent);vertical-align:super;margin-left:1px}
 .nav-links{display:flex;gap:20px;list-style:none;align-items:center}
-.nav-links a{text-decoration:none;color:var(--text-dark);font-weight:600;font-size:.95rem}
+.nav-links a{text-decoration:none;color:var(--text-dark);font-weight:600;font-size:.95rem;white-space:nowrap}
 .btn-call{background:var(--accent);color:var(--white)!important;padding:8px 18px;border-radius:var(--radius);display:inline-flex;align-items:center;gap:8px;transition:background .2s;white-space:nowrap}
 .btn-call:hover{background:var(--accent-hover)}
+.menu-toggle{display:none;background:none;border:0;font-size:1.4rem;color:var(--primary);cursor:pointer;padding:4px 8px}
 .hero{background:linear-gradient(135deg,var(--primary) 0%,#004b73 100%);color:var(--white);padding:76px 20px;text-align:center}
 .hero-wrap{max-width:840px;margin:0 auto}
 .badge{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);padding:6px 14px;border-radius:50px;display:inline-block;font-size:.86rem;font-weight:600;margin:0 4px 16px}
@@ -116,10 +118,12 @@ footer a{color:var(--accent-light);text-decoration:none}
 @media (max-width:768px){
 .hero h1{font-size:1.95rem}
 .section-header h2{font-size:1.6rem}
-.nav-links li:not(:last-child){display:none}
+.menu-toggle{display:inline-flex;align-items:center;justify-content:center}
+.nav-links{display:none;width:100%;flex-direction:column;align-items:flex-start;gap:12px;padding:10px 0}
+.nav-links.open{display:flex}
 .nav-container{padding:10px 16px}
-.logo{font-size:1.1rem}
-.btn-call{padding:8px 14px;font-size:.88rem}
+.logo{font-size:1.08rem;gap:5px}
+.btn-call{padding:7px 12px;font-size:.85rem}
 .two-col{grid-template-columns:1fr}
 .top-bar{flex-direction:column;gap:4px;text-align:center}
 .quote-box{padding:22px}
@@ -136,14 +140,15 @@ footer a{color:var(--accent-light);text-decoration:none}
 
 <header>
   <div class="nav-container">
-    <a href="/" class="logo">MILI<span>WATERPROOFING</span><span class="logo-tm">™</span></a>
+    <a href="/gujarati" class="logo">MILI <span>WATERPROOFING</span><span class="logo-tm">™</span></a>
+    <a href="tel:+919714343034" class="btn-call">📞 કૉલ કરો: 9714343034</a>
+    <button type="button" class="menu-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')"><i class="fa-solid fa-bars"></i></button>
     <ul class="nav-links">
       <li><a href="/" hreflang="en">Home (EN)</a></li>
       <li><a href="#services">સેવાઓ</a></li>
       <li><a href="#areas">વિસ્તારો</a></li>
       <li><a href="#faq">પ્રશ્નોત્તરી</a></li>
       <li><a href="#inquiry">અંદાજ મેળવો</a></li>
-      <li><a href="tel:+919714343034" class="btn-call">📞 કૉલ કરો: 9714343034</a></li>
     </ul>
   </div>
 </header>
