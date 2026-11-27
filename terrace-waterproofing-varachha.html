@@ -886,10 +886,10 @@
             var l = parseFloat(document.getElementById('vLength').value) || 0;
             var w = parseFloat(document.getElementById('vWidth').value) || 0;
             var area = Math.round(l * w).toLocaleString('en-IN');
-            var msg = "Hello Mili Waterproofing, I need Terrace Waterproofing in Varachha / Mota Varachha:%0A" +
-                      "• Dimensions: " + l + " ft x " + w + " ft = *" + area + " Sq. Ft.*%0A" +
-                      "Please schedule a site inspection.";
-            window.open("https://wa.me/919714343034?text=" + msg, "_blank");
+            var msg = "Hello Mili Waterproofing, I need Terrace Waterproofing in Varachha / Mota Varachha:\n" +
+          "• Dimensions: " + l + " ft x " + w + " ft = *" + area + " Sq. Ft.*\n" +
+          "Please schedule a site inspection.";
+window.open("https://wa.me/919714343034?text=" + encodeURIComponent(msg), "_blank");
           }
         </script>
       </div>
@@ -993,6 +993,11 @@
       <a href="https://www.youtube.com/@miliwaterproofing" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
       <a href="https://wa.me/919714343034" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
     </div>
+        <address style="font-style: normal; font-size: 0.85rem; line-height: 1.6; margin-bottom: 14px;">
+      <strong>Mili Waterproofing</strong><br>
+      C-2058 Second Floor Central Bazar, Varachha Main Road, Surat, Gujarat 395008<br>
+      <a href="tel:+919714343034" style="color: #cbd5e1; text-decoration: none;">+91 9714343034</a> · Open 24 Hours, All 7 Days
+    </address>
     <p>&copy; 2026 Mili Waterproofing — Varachha, Surat, Gujarat. All Rights Reserved.</p>
   </footer>
 
