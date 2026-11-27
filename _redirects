@@ -1,2 +1,2 @@
-/*.html /:splat 301!
-/gujarati    /gujarati.html    200
+/gujarati  /gujarati.html  200
+/leak-detection-surat/  /leak-detection-surat  301!
